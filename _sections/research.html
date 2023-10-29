@@ -1,0 +1,13 @@
+<!-- Research section -->
+
+<div class="row" id="research">
+    <div class="col">
+        <h2 clss="mb-5">📍 research activities</h2>
+        <p></p>
+        {% for project in site.data.research.projects %}
+            {% include_relative _libs/research_widget.html %}
+        {% endfor %}
+        <p></p>
+    </div>
+</div>
+<hr>

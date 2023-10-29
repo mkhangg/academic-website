@@ -1,0 +1,137 @@
+a {
+    color: #bd5d38;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #824027;
+    text-decoration: underline;
+}
+
+.text-primary {
+    color: #bd5d38 !important;
+}
+
+.rounded-circle {
+    border-radius: 100%;
+    border: 4px solid #bd5d38;
+}
+
+.ring {
+    width: 159px;
+    height: 159px;
+    border-radius: 100%;
+    position: flex;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 4px;
+}
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.20rem;
+    width: 4.20rem;
+    background-color: #ffffff; 
+    color: #495057; 
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 0.4rem;
+}
+
+.social-icons .social-icon:last-child {
+    margin-right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grey text for phonetic of name */
+.text-primary {
+    color: #4c5157 !important;
+}
+
+/* Code-styled text for research interest */
+code {
+    font-family: Consolas,"courier new";
+    color: rgb(0, 0, 0);
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 85%;
+}
+
+/* More/Less button for widgets */
+.collapse.in { 
+    display: inline !important; 
+}
+
+/* For gallery */
+div.gallery {
+    margin: 3px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    float: left;
+    width: 212px;
+}
+
+div.gallery:nth-child(8n+1) {
+    clear: both;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+div.desc {
+    padding: 8px;
+    text-align: center;
+}
+
+#button {
+    display: inline-block;
+    background-color: #9faba6;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 7px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #767f7b;
+}
+
+#button:active {
+    background-color: #9faba6;
+}
+
+#button.show {
+    opacity: 0.70;
+    visibility: visible;
+}

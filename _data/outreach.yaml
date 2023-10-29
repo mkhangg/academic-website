@@ -1,0 +1,25 @@
+mini-projects:
+
+  - title: An Autonomous Spatial Voice Localization Crawling Robot
+    system-name: Spidey
+    gif: assets/img/demo_spidey.gif
+    event: HackMIT 2022 (Boston, MA, U.S.)
+    event-web: https://hackmit.org/
+    team: <u>Khang Nguyen</u>.
+    post: https://spectacle.hackmit.org/project/185
+    code: https://github.com/mkhangg/hackmit22
+    demo: https://youtu.be/m1g6fkH6Zvg
+    description: We present an autonomous spatial voice localization crawling robot demonstrating the potential of assistive technology for people with visual impairment to ask for help whenever they are in a spatial area without physical assistance. 
+    prize: Won Sponsorship Award for Assistive Technologies over 198 competing teams.
+
+  - title: An Autonomous Ground Monitoring and Tree Planting Robot
+    system-name: iPlanter
+    gif: assets/img/demo_iplanter.gif
+    event: GT IEEE RoboTech 2022 (Atlanta, GA, U.S.)
+    event-web: https://robotech2022.devpost.com/
+    team: <u>Khang Nguyen</u>, Muhtasim Mahfuz, Vincent Kipchoge, Johnwon Hyeon.
+    post: https://devpost.com/software/tree-planting-robot
+    code: https://github.com/mkhangg/robotech22
+    demo: https://youtu.be/GZ0oAX-lLSM
+    description: Our tree planting robot demonstrates the an on-farm surveying robot that autonomously determines soil quality, plants seeds, and collects on-ground images.
+    prize: Won 2nd place in Body Track, 3rd place in Electrical Track, and Top 8 Prizes over 47 competing teams (approximately 160 participants).

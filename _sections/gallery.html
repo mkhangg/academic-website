@@ -1,0 +1,14 @@
+<!-- Gallery section -->
+
+<div class="row" id="gallery">
+    <div class="col">
+        <h2 clss="mb-5">📍 gallery</h2>
+        <p></p>
+        not all about robots, but also some random moments of my life.
+        <p></p>
+        {% for picture in site.data.gallery.pictures %}
+            {% include_relative _libs/gallery_widget.html %}
+        {% endfor %}
+        <p></p>
+    </div>
+</div>

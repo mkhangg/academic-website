@@ -1,0 +1,30 @@
+<!-- About section -->
+
+<div class="row mb-4">
+    <div class="col-lg-2 col-md-4">
+        <img class="ring" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}">
+        <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-3" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}"> -->
+        <p></p>
+        <hr>
+        <div class="social-icons">	
+            {% if site.data.about.scholar %} <a class="social-icon" href="{{ site.data.about.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> {% endif %}
+            {% if site.data.about.researchgate %} <a class="social-icon" href="{{ site.data.about.researchgate }}" target="_blank" rel="noopener" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 35px; color: #00D0BB"></i></a> {% endif %}
+            {% if site.data.about.github %} <a class="social-icon" href="{{ site.data.about.github }}" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> {% endif %}
+            {% if site.data.about.youtube %} <a class="social-icon" href="{{ site.data.about.youtube }}" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube" style="font-size: 35px; color: #FF0000"></i></a> {% endif %}
+            {% if site.data.about.resume %} <a class="social-icon" href="{{ site.data.about.resume }}" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> {% endif %}
+        </div>
+        <div>‎</div>    
+    </div>
+
+    <div class="col-lg-10 col-md-8">
+        <h2>{{ site.data.about.name }} {% if site.data.about.pronunciation %}<span class="text-primary">{{ site.data.about.pronunciation }}</span>{% endif %}</h2>
+        <p></p>
+        {{ site.data.about.first-paragraph }}
+        <p></p>
+        {{ site.data.about.second-paragraph }}      
+        <p></p>
+        <code>>> {{ site.data.about.research-interest }}</code>
+        <p></p>
+    </div>
+</div>
+<hr>

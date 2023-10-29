@@ -1,0 +1,27 @@
+<div class="row mb-4">
+    <div class="col-sm-4">
+        <img width="100%" height="185px" src="{{ project.gif }}"></img>
+    </div>
+    <div class="col-sm-8">
+        {% if project.system-name %} <b><i>{{ project.system-name }}</i>:</b> {% endif %}
+        <b>{{ project.title }}</b>
+        <br>
+        <i><a href="{{ project.conference-web }}" target="_blank" rel="noopener">{{ project.conference }}</a></i> 
+        {% if project.status %} <b style = "color: #e74d3c">[{{ project.status }}]</b> {% endif %}
+        <br>
+        {{ project.authors }}
+        <br>
+        {% if project.code %} <a href="{{ project.pdf }}" target="_blank" rel="noopener">[PDF]</a> {% endif %}
+        {% if project.code %} | <a href="{{ project.code }}" target="_blank" rel="noopener">[CODE]</a> {% endif %}
+        {% if project.demo %} | <a href="{{ project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
+        {% if project.slides %} | <a href="{{ project.slides }}" target="_blank" rel="noopener">[SLIDES]</a> {% endif %}
+        {% if project.talk %} | <a href="{{ project.talk }}" target="_blank" rel="noopener">[TALK]</a> {% endif %}
+        <br>
+        <u><b><i>Abstract</i></b>:</u> 
+        {{ project.abstract-less }}
+        <span class="collapse" id="{{ project.tag }}">
+            {{ project.abstract-more }}
+        </span> 
+        <span> <a href="#{{ project.tag }}" data-toggle="collapse">... More/Less</a></span>
+    </div>                       
+</div>

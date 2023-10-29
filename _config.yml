@@ -1,0 +1,9 @@
+# headers and icon 
+title: khang nguyen
+info: bscs'24 @ uta
+icon-pic: assets/img/mandu_icon.png
+
+# exclude these items when generated website in _site/index.html
+exclude:
+  - Gemfile
+  - Gemfile.lock
