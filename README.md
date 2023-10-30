@@ -6,6 +6,13 @@ This repository contains source code of [my academic website](https://mkhangg.co
   <img src="https://mkhangg.com/assets/img/devices_mockup_transparent.png" data-canonical-src="https://mkhangg.com/assets/img/devices_mockup_transparent.png" width="700"/><br/>
 </p>
 
+<!-- Update -->
+## Update
+List of updates (in terms of functionalities):
+
+* **[30 Oct 2023]** Dark/Light theme toggle button is added.
+* **[30 Oct 2023]** Dark/Light theme is displayed based on time of client.
+
 <!-- PREREQUISITES -->
 
 ## Prerequisites
@@ -113,7 +120,7 @@ bundle exec jekyll server
 
 You can either see the web version in the `_site/index.html` file or go to your `localhost`: [http://localhost:4000](http://localhost:4000).
 
-**4. Deploy Webpage at your desired host**
+**4. Deploy the webpage at your desired host**
 
 Some hosting services you can use are:
 
@@ -121,13 +128,6 @@ Some hosting services you can use are:
 2. GitHub - [tutorial](https://youtu.be/M5mg0r4ajt4).
 
 Hope you enjoy this tutorial and succesfully deploy for webpage!
-
-<!-- UPDATE -->
-## UPDATE
-List of updates (in terms of functionalities):
-
-* **[30 Oct 2023]** Dark/Light theme toggle button is added.
-* **[30 Oct 2023]** Dark/Light theme is displayed based on time of client.
 
 <!-- NOTE -->
 
