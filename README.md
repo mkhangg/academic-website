@@ -42,7 +42,7 @@ When opening the code from an IDE, you should see a structure like this:
 .
 ├───assets                      # folder including your images, files, etc
 ├───js                  
-    └───scripts.js              # the JS file for the back-to-top button
+    └───scripts.js              # the JS file for functional buttons
 ├───styles              
     └───styles.css              # the CSS file for colors and stuffs 
 ├───_data               
@@ -122,8 +122,15 @@ Some hosting services you can use are:
 
 Hope you enjoy this tutorial and succesfully deploy for webpage!
 
+<!-- UPDATE -->
+## UPDATE
+List of updates (in terms of functionalities):
+
+* **[30 Oct 2023]** Dark/Light theme toggle button is added.
+* **[30 Oct 2023]** Dark/Light theme is displayed based on time of client.
+
 <!-- NOTE -->
 
 ## Note:
 
-> I might not synchronize this source code frequently with my webpage in terms of contents, but I will try my best to update any functionalities that I added in on the actual one. Otherwise, you can scrape this and modify based on your wishes.
+> I might not synchronize this source code frequently with my webpage in terms of content, but I will try my best to update any functionalities that I added to the actual one. Besides that, you can scrape this and modify it based on your wishes.

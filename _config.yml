@@ -7,3 +7,4 @@ icon-pic: assets/img/mandu_icon.png
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
