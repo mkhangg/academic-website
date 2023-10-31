@@ -63,3 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         buttonEl.innerText = '🌙';
     }
 });
+
+
+// Automatically update year in footer
+document.getElementById("currentYear").textContent = new Date().getFullYear();
