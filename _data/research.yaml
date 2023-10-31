@@ -51,7 +51,7 @@ projects:
   - title: An Efficient 2D & 3D Perception Software-Hardware Framework for Mobile Cobot
     system-name: ExtPerFC
     gif: assets/img/demo_extperfc.gif
-    conference: arXiv (06/08/2023)</a>
+    conference: arXiv (06/08/2023)
     conference-web: 
     status: 
     authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
