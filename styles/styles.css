@@ -14,18 +14,22 @@ a:hover {
 }
 
 .rounded-circle {
+    width: 159px;
+    height: 159px;
     border-radius: 100%;
     border: 4px solid #bd5d38;
+}
+
+.ring-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ring {
     width: 159px;
     height: 159px;
     border-radius: 100%;
-    position: flex;
-    display: center;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(to right, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     padding: 4px;
 }
@@ -34,13 +38,13 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 4.20rem;
-    width: 4.20rem;
-    /* background-color: #ffffff;  */
+    height: 3.70rem;
+    width: 3.70rem;
     color: #495057; 
     border-radius: 100%;
     font-size: 1.5rem;
-    margin-right: 0.4rem;
+    margin-right: 0.25rem;
+    padding-top: 4px;
 }
 
 .social-icons .social-icon:last-child {
