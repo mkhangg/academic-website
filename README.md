@@ -10,8 +10,10 @@ This repository contains source code of [my academic website](https://mkhangg.co
 ## Update
 List of updates (in terms of functionalities):
 
-* **[30 Oct 2023]** Dark/Light theme toggle button is added.
+* **[04 Nov 2023]** Sink to disappear the icon is added.
+* **[04 Nov 2023]** Simple draggable pop-up icon (like Messenger) is added.
 * **[30 Oct 2023]** Dark/Light theme is displayed based on time of client.
+* **[30 Oct 2023]** Dark/Light theme toggle button is added.
 
 <!-- PREREQUISITES -->
 
@@ -54,17 +56,20 @@ When opening the code from an IDE, you should see a structure like this:
     └───styles.css              # the CSS file for colors and stuffs 
 ├───_data               
     ├───about.yaml              # data file for About section
+    ├───footer.yaml             # data file for Footer section
     ├───gallery.yaml            # data file for Gallery section
     ├───outreach.yaml           # data file for Outreach section
     └───research.yaml           # data file for Research section
 ├───_layouts      
     └───main.html               # the HTML layout for the webpage 
 ├───_libs      
+    ├───footer_widget.html      # html file for Footer widget
     ├───gallery_widget.html     # html file for Gallery widget
     ├───outreach_widget.html    # html file for Outreach widget
     └───research_widget.html    # html file for Research widget     
 ├───_sections           
     ├───about.html              # html file for About section
+    ├───footer.html             # html file for Footer section
     ├───gallery.html            # html file for Gallery section
     ├───outreach.html           # html file for Outreach section
     └───research.html           # html file for Research section

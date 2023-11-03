@@ -9,8 +9,9 @@
             <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>> web source @github</b></a>
         </div>
         <div class="col col-md text-right">
-            <img class="mr+4" src="{{ site.data.footer.logo_affiliation_1 }}" data-canonical-src="{{ site.data.footer.logo_affiliation_1 }}" width="60"/>
-            <img class="mr+4" src="{{ site.data.footer.logo_affiliation_2 }}" data-canonical-src="{{ site.data.footer.logo_affiliation_2 }}" width="60"/>
+            {% for logo in site.data.footer.logos %}
+                {% include_relative _libs/footer_widget.html %}
+            {% endfor %}
         </div>
     </div>
     <p></p>

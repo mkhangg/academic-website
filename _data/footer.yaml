@@ -1,2 +1,7 @@
-logo_affiliation_1: assets/img/uta_cse_logo.png
-logo_affiliation_2: assets/img/uta_logo.png
+logos:
+
+  - logo_affiliation: assets/img/uta_cse_logo.png
+    logo_alt_text: "UTA CSE"
+    
+  - logo_affiliation: assets/img/uta_logo.png
+    logo_alt_text: "UTA"

@@ -1,5 +1,3 @@
-<!-- Website layout -->
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -31,12 +29,22 @@
     </head>
 
     <body class="light-theme">
+
         <!-- Back to top button -->
         <a id="button"></a>
 
         <!-- Toggle dark/light theme button -->
         <button onclick="toggleTheme()">☀️</button>
         
+        <!-- Assitant icon saying about theme changes -->
+        <div class="popup-icon-container" id="popupIconContainer" draggable="true">
+            <div class="icon"><img src="assets/img/mandu_icon.png" width="65" height="65"></div>
+            <div class="speech-balloon"></div>
+        </div>
+        
+        <!-- Dismissal area for assistant icon -->
+        <div class="dismissal-area" id="dismissalArea">&#10006;</div>
+
         <!-- Content -->
         <div class="container mt-5">
             <!-- About section -->
@@ -65,7 +73,7 @@
         <p></p>
         I grew up in <a href="https://en.wikipedia.org/wiki/Saigon" target="_blank" rel="noopener">Saigon, Vietnam</a>, and was fortunate to spend my most memorable time at the <a href="https://en.wikipedia.org/wiki/VNU-HCM_High_School_for_the_Gifted" target="_blank" rel="noopener">VNU-HCM High School for the Gifted</a> (informatics program of 2020) and previously <a href="https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_%C4%90%E1%BA%A1i_Ngh%C4%A9a_High_School_for_the_Gifted" target="_blank" rel="noopener">TĐN Secondary School for the Gifted</a> (mathematics program of 2017) with very good friends - too many to name them here, where we played football (soccer) on concrete fields together afterschool.      
         <p></p>
-        <code>&gt;&gt; I do research in robotics, mainly focusing on applying cognitive architectures to robotic grasping to enable robots with a closely similar human grasping capability (<i>e.g.</i>, the robot comes into the kitchen, finds a banana, grasps without crushing it, and brings it back to you).</code>
+        <code>&gt;&gt; I do research in robotics, mainly focusing on applying <b>cognitive architectures to robotic grasping</b> to enable robots with a closely similar human grasping capability. Just imagine the robot enters the kitchen, finds a banana, grasps without crushing it, and brings it back to you.</code>
         <p></p>
     </div>
 </div>
@@ -334,7 +342,7 @@
 
         
             <div class="gallery">
-    <img src="assets/memo/snow_football.png" alt="first time playing football on snow" width="800" height="600" />
+    <img src="assets/memo/snow_football.jpg" alt="first time playing football on snow" width="800" height="600" />
     <div class="desc">first time playing football on snow (2022)</div>
 </div>
 
@@ -358,13 +366,13 @@
 
         
             <div class="gallery">
-    <img src="assets/memo/family.png" alt="my sister started her mba" width="800" height="600" />
+    <img src="assets/memo/family.jpg" alt="my sister started her mba" width="800" height="600" />
     <div class="desc">my sister started her mba (2018)</div>
 </div>
 
         
             <div class="gallery">
-    <img src="assets/memo/doituyentoan.png" alt="my boys from tđn maths team" width="800" height="600" />
+    <img src="assets/memo/doituyentoan.jpg" alt="my boys from tđn maths team" width="800" height="600" />
     <div class="desc">my boys from tđn maths team (2017)</div>
 </div>
 
@@ -385,8 +393,11 @@
             <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener"><b>&gt; web source @github</b></a>
         </div>
         <div class="col col-md text-right">
-            <img class="mr+4" src="assets/img/uta_cse_logo.png" data-canonical-src="assets/img/uta_cse_logo.png" width="60" />
-            <img class="mr+4" src="assets/img/uta_logo.png" data-canonical-src="assets/img/uta_logo.png" width="60" />
+            
+                <img class="mr+4" src="assets/img/uta_cse_logo.png" data-canonical-src="assets/img/uta_cse_logo.png" alt="UTA CSE" width="60" />
+            
+                <img class="mr+4" src="assets/img/uta_logo.png" data-canonical-src="assets/img/uta_logo.png" alt="UTA" width="60" />
+            
         </div>
     </div>
     <p></p>
