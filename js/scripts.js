@@ -12,8 +12,10 @@ $(window).scroll(function() {
 btn.on('click', function(e) {
     e.preventDefault();
     const speechBalloon = document.querySelector('.speech-balloon');
+    const clickSound = new Audio('assets/sounds/collision_sound.wav');
     $('html, body').animate({scrollTop:0}, '300');
     speechBalloon.innerText = 'back to top!';
+    clickSound.play();
 });
 
 
@@ -22,6 +24,7 @@ function toggleTheme() {
     const bodyEl = document.body;
     const buttonEl = document.querySelector('button');
     const speechBalloon = document.querySelector('.speech-balloon');
+    const clickSound = new Audio('assets/sounds/switch_sound.wav');
 
     if (bodyEl.classList.contains('light-theme')) {
         bodyEl.classList.remove('light-theme');
@@ -30,6 +33,7 @@ function toggleTheme() {
         buttonEl.classList.add('dark-theme');
         buttonEl.innerText = '☀️';
         speechBalloon.innerText = 'lights turned off!';
+        clickSound.play();
     } else {
         bodyEl.classList.remove('dark-theme');
         bodyEl.classList.add('light-theme');
@@ -37,6 +41,7 @@ function toggleTheme() {
         buttonEl.classList.add('light-theme');
         buttonEl.innerText = '🌙';
         speechBalloon.innerText = 'lights turned on!';
+        clickSound.play();
     }
 }
 
@@ -96,6 +101,8 @@ document.addEventListener(moveEvent, (e) => {
 
 // Capture mouse up (desktop) or touch end (mobile) events
 document.addEventListener(endEvent, (e) => {
+    const clickSound = new Audio('assets/sounds/disappear_sound.wav');
+
     if (!isDragging) {
         return;
     }
@@ -108,6 +115,13 @@ document.addEventListener(endEvent, (e) => {
     // Check if icon is near the middle bottom dismissal area
     if (Math.abs(clientX - centerX) < 50 && Math.abs(clientY - centerY) < 100) {
         popupIconContainer.classList.add('hidden');
+
+        if (navigator.vibrate && isMobile) {
+            navigator.vibrate(200);
+            clickSound.play();
+        } else {
+            clickSound.play();
+        }
     }
 
     dismissalArea.style.display = 'none';

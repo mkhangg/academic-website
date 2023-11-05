@@ -10,6 +10,7 @@ This repository contains source code of [my academic website](https://mkhangg.co
 ## Update
 List of updates (in terms of functionalities):
 
+* **[06 Nov 2023]** Sound effects when users interacting with functionalities.
 * **[04 Nov 2023]** Sink to disappear the icon is added.
 * **[04 Nov 2023]** Simple draggable pop-up icon (like Messenger) is added.
 * **[30 Oct 2023]** Dark/Light theme is displayed based on time of client.
