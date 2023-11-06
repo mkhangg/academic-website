@@ -1,0 +1,25 @@
+<!-- Fails section -->
+
+<hr>
+<div class="row" id="fails">
+    <div class="col">
+        <h2 clss="mb-5">📍 my failures</h2>
+        <p></p>
+        {{ site.data.fails.introduction }}
+        <p></p>
+        <div class="row mb-4">
+            <div class="col-sm-4">
+                <img width="100%" style="border-radius: 10px" src="assets/img/iceberg.png">
+            </div>
+            <div class="col-sm-8">
+                <ul class="fancy-list">
+                    {% for event in site.data.fails.events %}
+                        {% include_relative _libs/fails_widget.html %}
+                    {% endfor %}
+                </ul>
+                <p></p>
+                ... and of course many more to come!
+            </div>
+        </div>        
+    </div>
+</div>

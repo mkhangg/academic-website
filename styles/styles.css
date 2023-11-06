@@ -90,7 +90,7 @@ div.gallery {
     float: left;
     width: 212px;
 }
-div.gallery:nth-child(8n+1) {
+div.gallery:nth-child(9n+1) {
     clear: both;
 }
 div.gallery img {
@@ -248,4 +248,29 @@ button.dark-theme {
 
 .hidden {
     display: none;
+}
+
+
+/* Fancy list for failure items */
+.fancy-list {
+    max-width: 600px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.fancy-list li {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fancy-list li:hover {
+    transform: translateY(-5px);
+}
+.fancy-list li::before {
+    color: #000000;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
 }

@@ -115,13 +115,7 @@ document.addEventListener(endEvent, (e) => {
     // Check if icon is near the middle bottom dismissal area
     if (Math.abs(clientX - centerX) < 50 && Math.abs(clientY - centerY) < 100) {
         popupIconContainer.classList.add('hidden');
-
-        if (navigator.vibrate && isMobile) {
-            navigator.vibrate(200);
-            clickSound.play();
-        } else {
-            clickSound.play();
-        }
+        clickSound.play();
     }
 
     dismissalArea.style.display = 'none';
