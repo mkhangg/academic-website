@@ -10,11 +10,12 @@ This repository contains source code of [my academic website](https://mkhangg.co
 ## Update
 List of updates (in terms of functionalities):
 
+* **[17 Nov 2023]** Moving JS particles when dark theme is enabled (like fireflies) is added.
 * **[17 Nov 2023]** New webpage scrollbar style is added.
-* **[06 Nov 2023]** Sound effects when users interacting with functionalities.
+* **[06 Nov 2023]** Sound effects when users interact with functionalities.
 * **[04 Nov 2023]** Sink to disappear the icon is added.
 * **[04 Nov 2023]** Simple draggable pop-up icon (like Messenger) is added.
-* **[30 Oct 2023]** Dark/Light theme is displayed based on time of client.
+* **[30 Oct 2023]** Dark/Light theme is displayed based on the client's time.
 * **[30 Oct 2023]** Dark/Light theme toggle button is added.
 
 <!-- PREREQUISITES -->

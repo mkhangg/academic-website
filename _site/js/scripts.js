@@ -158,3 +158,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Automatically update year in footer
 document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+
+// Canvas for particle moves
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const particles = [];
+
+
+// Resize canvas width and height
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+
+// Class for Particle
+class Particle {
+    
+    constructor() {
+        this.reset();
+    }
+
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.color = 'rgba(255, 255, 255, ' + 0.7 + ')';
+        this.lifespan = 100;
+    }
+
+    update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.color = 'rgba(255, 255, 255, ' + this.lifespan--/100 + ')';
+
+        if (this.lifespan <= 0) {
+            this.reset();
+        }
+    }
+
+    draw(ctx) {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+
+// Initialize 101 particles
+for (let i = 0; i < 101; i++) {
+    particles.push(new Particle());
+}
+
+
+// Make the particles move
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(particle => {
+        particle.update();
+        particle.draw(ctx);
+    });
+
+    requestAnimationFrame(animate);
+}
+
+
+// Animate the particles
+animate();
