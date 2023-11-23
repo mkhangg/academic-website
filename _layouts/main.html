@@ -33,11 +33,16 @@
         <!-- Moving particles -->
         <canvas id="canvas"></canvas>
 
+        <!-- Progress bar on top -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
         <!-- Back to top button -->
-        <a id="button"></a>
+        <a id="back-to-top-button"></a>
 
         <!-- Toggle dark/light theme button -->
-        <button onclick="toggleTheme()">☀️</button>
+        <button class="toggle-theme-button" onclick="toggleTheme()">☀️</button>
         
         <!-- Assitant icon saying about theme changes -->
         <div class="popup-icon-container" id="popupIconContainer" draggable="true">
@@ -57,6 +62,9 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
         
+        <!-- Isotope JS -->
+        <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.2/dist/isotope.pkgd.min.js"></script>
+
 		<!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         

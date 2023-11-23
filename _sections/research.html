@@ -5,9 +5,18 @@
     <div class="col">
         <h2 clss="mb-5">📍 research activities</h2>
         <p></p>
-        {% for project in site.data.research.projects %}
-            {% include_relative _libs/research_widget.html %}
-        {% endfor %}
+        <div id="filters">
+            <button class="filter-button active" data-filter="*">all</button>
+            {% for category in site.data.research.categories %}
+                <button class="filter-button" data-filter="{{ category.data-filter }}">{{ category.category-name }}</button>
+            {% endfor %}
+        </div>
+        <p></p>
+        <div id="projects">
+            {% for project in site.data.research.projects %}
+                {% include_relative _libs/research_widget.html %}
+            {% endfor %}
+        </div>
         <p></p>
     </div>
 </div>

@@ -1,3 +1,14 @@
+/* Document body styles */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
 /* Hyperlink styles */
 a {
     color: #bd5d38;
@@ -16,7 +27,7 @@ a:hover {
 }
 
 
-/* Code-styled text for research interest */
+/* Code-style text for research interest */
 code {
     font-family: "Consolas";
     color: rgb(0, 0, 0);
@@ -29,23 +40,109 @@ code {
 
 
 /* Border styles for profile picture */
-.rounded-circle {
-    width: 159px;
-    height: 159px;
-    border-radius: 100%;
-    border: 4px solid #bd5d38;
-}
 .ring-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .ring {
-    width: 159px;
-    height: 159px;
-    border-radius: 100%;
-    background: linear-gradient(to right, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+}
+.ring::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
     padding: 4px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    mask-composite: exclude;
+}
+.hollow-ring {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    z-index: 1;
+}
+.light-theme .hollow-ring {
+    background-color: #ffffff;
+}
+.dark-theme .hollow-ring {
+    background-color: #333333;
+}
+.profile-image {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #ffffff;
+    z-index: 2;
+}
+.light-theme .profile-image {
+    border: 5px solid #ffffff
+}
+.dark-theme .profile-image {
+    border: 5px solid #333333
+}
+
+
+/* Styles for emoji indicator with emoji */
+.emoji-indicator {
+    font-size: medium;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    /* position: absolute;
+    bottom: 5px;
+    right: 1px; */
+    position: relative;
+    top: 112px;
+    left: 107px;
+    border: 4px solid #ffffff;
+    z-index: 1000;
+}
+.light-theme .emoji-indicator {
+    border: 4px solid #ffffff;
+    background-color: #efefef;
+}
+.dark-theme .emoji-indicator {
+    border: 4px solid #333333;
+    background-color: #787878;
+}
+.emoji-indicator .hover-text {
+    display: none;
+    white-space: nowrap;
+    margin-left: 2px;
+    /* margin-right: 4px; */
+}
+.emoji-indicator:hover .hover-text {
+    display: inline;
+}
+.emoji-indicator:hover {
+    border-radius: 21.5px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -73,6 +170,47 @@ code {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* Styles for project list */
+#projects {
+    margin: 0px;
+}
+.project {
+    margin: 0px;
+}
+
+
+/* Styles for filter buttons */
+#filters .filter-button {
+    padding: 5px 8px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+#filters .filter-button:hover {
+    background-color: rgba(194, 194, 194, 0.45);
+}
+#filters .filter-button.active {
+    background-color: rgba(194, 194, 194, 0.45);
+}
+
+
+/* Light theme styles for filter button */
+.light-theme #filters .filter-button {
+    border: 1px solid #333333;
+    color: #333333;
+}
+
+
+/* Dark theme styles for filter button */
+.dark-theme #filters .filter-button {
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 
@@ -105,7 +243,7 @@ div.desc {
 
 
 /* Back-to-top button styles */
-#button {
+#back-to-top-button {
     display: inline-block;
     background-color: #9faba6;
     width: 55px;
@@ -120,7 +258,7 @@ div.desc {
     visibility: hidden;
     z-index: 1000;
 }
-#button::after {
+#back-to-top-button::after {
     content: "\f077";
     font-family: FontAwesome;
     font-weight: normal;
@@ -129,21 +267,21 @@ div.desc {
     line-height: 50px;
     color: #fff;
 }
-#button:hover {
+#back-to-top-button:hover {
     cursor: pointer;
     background-color: #767f7b;
 }
-#button:active {
+#back-to-top-button:active {
     background-color: #9faba6;
 }
-#button.show {
+#back-to-top-button.show {
     opacity: 0.70;
     visibility: visible;
 }
 
 
 /* Toggle theme button styles */
-button {
+.toggle-theme-button {
     width: 55px;
     height: 55px;
     border-radius: 7px;
@@ -157,22 +295,14 @@ button {
 
 
 /* Light theme styles for toggle theme button */
-body.light-theme {
-    background-color: #ffffff;
-    color: #333333;
-}
-button.light-theme {
+.light-theme .toggle-theme-button {
     background-color: #919191;
     color: #ffffff;
 }
 
 
 /* Dark theme styles for toggle theme button */
-body.dark-theme {
-    background-color: #333333;
-    color: #ffffff;
-}
-button.dark-theme {
+.dark-theme .toggle-theme-button {
     background-color: #ccc;
     color: #333333;
 }
@@ -211,19 +341,19 @@ button.dark-theme {
 }
 
 
-/* Dark theme for speech balloon */
-.dark-theme .speech-balloon {
-    background-color: #495057;
-    color: white;
-    border: 2px solid #555;
-}
-
-
 /* Light theme for speech balloon */
 .light-theme .speech-balloon {
     background-color: #f5f5f5;
     color: black;
     border: 2px solid #ddd;
+}
+
+
+/* Dark theme for speech balloon */
+.dark-theme .speech-balloon {
+    background-color: #495057;
+    color: white;
+    border: 2px solid #555;
 }
 
 
@@ -248,6 +378,28 @@ button.dark-theme {
 
 .hidden {
     display: none;
+}
+
+
+/* Styles for progress bar */
+.progress-bar-container {
+    width: 100%;
+    height: 1px;
+    background: #f1f1f1;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.progress-bar {
+    height: 1px;
+    background: #bd5d38;
+    width: 0%;
+}
+.light-theme .progress-bar-container {
+    background: #f1f1f1;
+}
+.dark-theme .progress-bar-container {
+    background: #888;
 }
 
 

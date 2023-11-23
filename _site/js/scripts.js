@@ -1,5 +1,5 @@
 // Back-to-top button
-var btn = $('#button');
+var btn = $('#back-to-top-button');
 
 $(window).scroll(function() {
     if ($(window).scrollTop() > 300) {
@@ -22,7 +22,7 @@ btn.on('click', function(e) {
 // Button for toggle theme (dark/light)
 function toggleTheme() {
     const bodyEl = document.body;
-    const buttonEl = document.querySelector('button');
+    const buttonEl = document.querySelector('.toggle-theme-button');
     const speechBalloon = document.querySelector('.speech-balloon');
     const clickSound = new Audio('assets/sounds/switch_sound.wav');
 
@@ -48,7 +48,7 @@ function toggleTheme() {
 
 // Handle scroll event to hide/show back-to-top and toggle theme button
 window.addEventListener('scroll', function() {
-    const buttonEl = document.querySelector('button');
+    const buttonEl = document.querySelector('.toggle-theme-button');
     if (window.scrollY > 0) {
         buttonEl.style.display = 'none';
     } else {
@@ -134,22 +134,88 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Update progress bar as user scrolls down
+window.onscroll = function() {progressBar()};
+
+function progressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
+
+// Get all filter buttons and change their active status as user clicks
+var filterButtons = document.querySelectorAll('#filters .filter-button'); 
+filterButtons.forEach(function(filterButton) {
+    filterButton.addEventListener('click', function() {
+        filterButtons.forEach(function(flrbtn) {
+            flrbtn.classList.remove('active');
+        });
+        this.classList.add('active');
+    });
+});
+
+
+// Initialize Isotope with vertical layout
+var iso = new Isotope('#projects', {
+    itemSelector: '.project',
+    layoutMode: 'vertical'
+});
+
+
+// Function to update Isotope layout with smooth transitions
+function updateLayout(collapseElement, isExpanding) {
+    if (isExpanding) {
+        $(collapseElement).css('display', 'none');
+        iso.arrange();
+        setTimeout(function() {
+            $(collapseElement).css('display', '');
+            iso.arrange();
+        }, 300);
+    } else {
+        iso.arrange();
+        setTimeout(function() {
+            $(collapseElement).css('display', 'none');
+            iso.arrange();
+        }, 300);
+    }
+}
+
+
+// Bind updateLayout function to the collapsible elements' events
+$('.collapse').on('show.bs.collapse', function () {
+    updateLayout(this, true);
+}).on('hide.bs.collapse', function () {
+    updateLayout(this, false);
+});
+
+
+// Filter items on button click
+var filtersElem = document.querySelector('#filters');
+filtersElem.addEventListener('click', function(event) {
+    if (!event.target.matches('.filter-button')) {
+        return;
+    }
+    var filterValue = event.target.getAttribute('data-filter');
+    iso.arrange({ filter: filterValue });
+});
+
+
 // Dark/Light theme based on predefined time
 document.addEventListener('DOMContentLoaded', function() {
-    const buttonEl = document.querySelector('button');
+    const buttonEl = document.querySelector('.toggle-theme-button');
     const speechBalloon = document.querySelector('.speech-balloon');
     var currentHour = new Date().getHours();
 
-    // Dark theme is used between 8 PM of last day
-    // to 6 AM next day. Otherwise, use light theme
-    if (currentHour >= 20 || currentHour < 6) {
+    // Dark theme is used between 7 PM of last day
+    // to 7 AM next day. Otherwise, use light theme
+    if (currentHour >= 19 || currentHour < 7) {
         document.body.classList.add('dark-theme');
-        buttonEl.classList.add('dark-theme');
         buttonEl.innerText = '☀️';
         speechBalloon.innerText = 'it\'s night, lights off!';
     } else {
         document.body.classList.add('light-theme');
-        buttonEl.classList.add('light-theme');
         buttonEl.innerText = '🌙';
         speechBalloon.innerText = 'it\'s day, lights on!';
     }

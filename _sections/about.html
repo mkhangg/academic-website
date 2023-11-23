@@ -3,8 +3,17 @@
 <div class="row mb-4">
     <div class="col-lg-2 col-md-4">
         <div class="ring-container">
-            <img class="ring" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}">
-            <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-3" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}"> -->
+            <div class="ring">
+                <div class="hollow-ring">
+                    <img class="profile-image" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}">
+                    {% if site.data.about.emoji %} 
+                        <div class="emoji-indicator">
+                            {{ site.data.about.emoji }} 
+                            <span class="hover-text"> {{ site.data.about.desc-emoji }} </span> 
+                        </div> 
+                    {% endif %}
+                </div>
+            </div>
         </div>
         <hr>
         <div class="social-icons">	
