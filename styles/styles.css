@@ -214,6 +214,54 @@ code {
 }
 
 
+/* Styles for pager buttons */
+.isotope-pager {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.isotope-pager .pager {
+    display: block;
+    padding: 4px 7px;
+    background-color: transparent;
+    border: 1px solid #333333;
+    margin: 0 5px;
+    border-radius: 7px;
+}
+.isotope-pager .pager:hover {
+    background-color: rgba(194, 194, 194, 0.45);
+    cursor: pointer;
+}
+.isotope-pager .pager.active {
+    background-color: rgba(194, 194, 194, 0.45);
+}
+
+
+/* Light theme styles for pager button */
+.light-theme .isotope-pager .pager {
+    border: 1px solid #333333;
+    color: #333333;
+}
+
+
+/* Dark theme styles for pager button */
+.dark-theme .isotope-pager .pager {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+
+/* Disabled stye for pager buttons */
+.isotope-pager .pager:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+    opacity: 0.5;
+    border: 1px solid #aaaaaa;
+}
+
+
 /* More/Less button for widgets */
 .collapse.in { 
     display: inline !important; 

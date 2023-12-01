@@ -1,12 +1,9 @@
 categories:
 
-  - data-filter: .manipulation
-    category-name: manipulation
+  - data-filter: perception manipulation
+    category-name: perception + manipulation
 
-  - data-filter: .perception
-    category-name: perception
-
-  - data-filter: .framework
+  - data-filter: framework
     category-name: framework
 
 

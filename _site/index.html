@@ -106,17 +106,15 @@
         <div id="filters">
             <button class="filter-button active" data-filter="*">all</button>
             
-                <button class="filter-button" data-filter=".manipulation">manipulation</button>
+                <button class="filter-button" data-filter="perception manipulation">perception + manipulation</button>
             
-                <button class="filter-button" data-filter=".perception">perception</button>
-            
-                <button class="filter-button" data-filter=".framework">framework</button>
+                <button class="filter-button" data-filter="framework">framework</button>
             
         </div>
         <p></p>
-        <div id="projects">
+        <div id="projects" class="isotope">
             
-                <div class="project perception manipulation">
+                <div class="project" data-filter="perception manipulation">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="assets/img/demo_scene_perception.gif" />
@@ -141,13 +139,13 @@
             <span class="collapse" id="more_scene_perception">
                 grasping capability through the proposed pipeline. First, we design an RGB image-based segmentation approach for single-view 3D semantic scene segmentation, leveraging common object classes in 2D datasets to encapsulate 3D points into point clouds of object instances through corresponding depth maps. Next, 3D correspondences of two consecutive segmented point clouds are extracted based on matched keypoints between objects of interest in RGB images from the prior step. In addition, to be aware of spatial changes in 3D feature distribution, we also weigh each 3D point pair based on the estimated distribution using kernel density estimation (KDE), which subsequently gives robustness with less central correspondences while solving for rigid transformations between point clouds. Finally, we test our proposed pipeline on the 7-DOF dual-arm Baxter robot with a mounted Intel RealSense D435i RGB-D camera. The result shows that our robot can segment objects of interest, register multiple views while moving, and grasp the target object.
             </span> 
-            <span> <a href="#more_scene_perception" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#more_scene_perception" data-toggle="collapse" onclick="toggleText(this)" id="link-more_scene_perception">... See More</a></span>
         </div>                       
     </div>
 </div>
 
             
-                <div class="project perception manipulation">
+                <div class="project" data-filter="perception manipulation">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="assets/img/demo_online.gif" />
@@ -172,13 +170,13 @@
             <span class="collapse" id="more_online">
                 first determine the graspable region of the robot hand on the given object's mesh. Then, we uniformly sample handle points within the graspable region and perform deformation with multiple handle points based on the robot gripper configuration. In each deformation, we identify the orientation of handle points and prevent self-intersection to guarantee the object's physical meaning when multiple handle points are simultaneously applied to the mesh at different deformation intensities. We also introduce a lightweight neural network for 3D deformable object classification. Finally, we test our generated dataset on the Baxter robot with two 7-DOF arms, an integrated RGB-D camera, and a 3D deformable object classifier. The result shows that the robot is able to classify real-world deformed objects from point clouds captured at multiple views by the RGB-D camera.
             </span> 
-            <span> <a href="#more_online" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#more_online" data-toggle="collapse" onclick="toggleText(this)" id="link-more_online">... See More</a></span>
         </div>                       
     </div>
 </div>
 
             
-                <div class="project perception manipulation">
+                <div class="project" data-filter="perception manipulation">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="assets/img/demo_multiplanar.gif" />
@@ -203,13 +201,13 @@
             <span class="collapse" id="more_multiplanar">
                 camera system and the robot's end-effector for 3D object manipulation. Our approach first takes the robot end-effector as ground truth to calibrate the camera’s position and orientation while the robot arm moves the object in multiple planes in 3D space, and a 2D state-of-the-art vision detector identifies the object’s center in the image coordinates system. The transformation between world coordinates and image coordinates is then computed using 2D pixels from the detector and 3D known points obtained by robot kinematics. Next, an integrated stereo-vision system estimates the distance between the camera and the object, resulting in 3D object localization. We test our proposed method on the Baxter robot with two 7-DOF arms and a 2D detector that can run in real time on an onboard GPU. After self-calibrating, our robot can localize objects in 3D using an RGB camera and depth image.
             </span> 
-            <span> <a href="#more_multiplanar" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#more_multiplanar" data-toggle="collapse" onclick="toggleText(this)" id="link-more_multiplanar">... See More</a></span>
         </div>                       
     </div>
 </div>
 
             
-                <div class="project framework">
+                <div class="project" data-filter="framework">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="assets/img/demo_extperfc.gif" />
@@ -234,13 +232,13 @@
             <span class="collapse" id="more_extperfc">
                 framework, namely <i>ExtPerFC</i>, that supports both conventional hardware and software components and integrates machine learning object detectors without requiring an additional dedicated graphic processor unit (GPU). We first design our framework to achieve real-time performance on the existing robotic system, guarantee configuration optimization, and concentrate on code reusability. We then mathematically model and utilize our transfer learning strategies for 2D object detection and fuse them into depth images for 3D depth estimation. Lastly, we systematically test the proposed framework on the Baxter robot with two 7-DOF arms, a four-wheel mobility base, and an Intel RealSense D435i RGB-D camera. The results show that the robot achieves real-time performance while executing other tasks (<i>e.g.</i>, map building, localization, navigation, object detection, arm moving, and grasping) simultaneously with available hardware like Intel onboard CPUs/GPUs on distributed computers. Also, to comprehensively control, program, and monitor the robot system, we design and introduce an end-user application.
             </span> 
-            <span> <a href="#more_extperfc" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#more_extperfc" data-toggle="collapse" onclick="toggleText(this)" id="link-more_extperfc">... See More</a></span>
         </div>                       
     </div>
 </div>
 
             
-                <div class="project framework">
+                <div class="project" data-filter="framework">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="assets/img/demo_perfc.gif" />
@@ -265,13 +263,13 @@
             <span class="collapse" id="more_perfc">
                 multiple computing devices, and concentrate on code reusability. We then utilize transfer learning strategies for 2D object detection and fuse them into depth images for 3D depth estimation. Lastly, we test the proposed framework on the Baxter robot with two 7-DOF arms and a four-wheel mobility base. The results show that the robot achieves real-time performance while executing other tasks (map building, localization, navigation, object detection, arm moving, and grasping) with available hardware like Intel onboard GPUs on distributed computers. Also, to comprehensively control, program, and monitor the robot system, we  design and introduce an end-user application.
             </span> 
-            <span> <a href="#more_perfc" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#more_perfc" data-toggle="collapse" onclick="toggleText(this)" id="link-more_perfc">... See More</a></span>
         </div>                       
     </div>
 </div>
 
             
-                <div class="project ">
+                <div class="project" data-filter="">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="assets/img/demo_iotree.gif" />
@@ -296,7 +294,7 @@
             <span class="collapse" id="more_iotree">
                 continuously measure the impedance variations inside the living tree’s xylem, where water and nutrients are transported from the root to the upper parts. The collected data are then compressed and transmitted to a base station located at up to 1.8 kilometers (approximately 1.1 miles) away. The entire <i>IoTree</i> system is powered by wind energy and controlled by an adaptive computing technique called block-based intermittent computing, ensuring the forward progress and data consistency under intermittent power and allowing the firmware to execute with the most optimal memory and energy usage. We prototype <i>IoTree</i> that opportunistically performs sensing, data compression, and long-range communication tasks without batteries. During in-lab experiments, <i>IoTree</i> also obtains the accuracy of 91.08% and 90.51% in measuring 10 levels of nutrients, NH<sub>3</sub> and K<sub>2</sub>O, respectively. While tested with Burkwood Viburnum and White Bird trees in the indoor environment, <i>IoTree</i> data strongly correlated with multiple watering and fertilizing events. We also deployed <i>IoTree</i> on a grapevine farm for 30 days, and the system is able to provide sufficient measurements every day.
             </span> 
-            <span> <a href="#more_iotree" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#more_iotree" data-toggle="collapse" onclick="toggleText(this)" id="link-more_iotree">... See More</a></span>
         </div>                       
     </div>
 </div>

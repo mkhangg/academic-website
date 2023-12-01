@@ -1,4 +1,4 @@
-<div class="project {{ project.category }}">
+<div class="project" data-filter="{{ project.category }}">
     <div class="row mb-4">
         <div class="col-sm-4">
             <img width="100%" height="185px" src="{{ project.gif }}">
@@ -23,7 +23,7 @@
             <span class="collapse" id="{{ project.tag }}">
                 {{ project.abstract-more }}
             </span> 
-            <span> <a href="#{{ project.tag }}" data-toggle="collapse">... More/Less</a></span>
+            <span> <a href="#{{ project.tag }}" data-toggle="collapse" onclick="toggleText(this)" id="link-{{ project.tag }}">... See More</a></span>
         </div>                       
     </div>
 </div>

@@ -19,6 +19,36 @@ btn.on('click', function(e) {
 });
 
 
+// Change the text interchangably "See More" and "See Less"
+function toggleText(linkElement) {
+    var collapseId = linkElement.getAttribute('href').substring(1);
+    var collapseElement = document.getElementById(collapseId);
+
+    $(collapseElement).on('hidden.bs.collapse', function () {
+        linkElement.textContent = '... See More';
+    });
+    $(collapseElement).on('shown.bs.collapse', function () {
+        linkElement.textContent = '... See Less';
+    });
+}
+
+
+// Initialize the toggleText function for each link
+document.querySelectorAll('[data-toggle="collapse"]').forEach(function (linkElement) {
+    toggleText(linkElement);
+});
+
+
+
+// Scroll to top of a div based on its tag
+function scrollToTopDiv(divTag) {
+    $(divTag)[0].scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+
 // Button for toggle theme (dark/light)
 function toggleTheme() {
     const bodyEl = document.body;
@@ -147,25 +177,32 @@ function progressBar() {
 
 // Get all filter buttons and change their active status as user clicks
 var filterButtons = document.querySelectorAll('#filters .filter-button'); 
+var speechBalloon = document.querySelector('.speech-balloon');
 filterButtons.forEach(function(filterButton) {
     filterButton.addEventListener('click', function() {
         filterButtons.forEach(function(flrbtn) {
             flrbtn.classList.remove('active');
         });
         this.classList.add('active');
+        if (this.textContent === "perception + manipulation") {
+            speechBalloon.innerText = 'see RoPM projects!';
+        } else {
+            speechBalloon.innerText = 'see ' + this.textContent + ' projects!';
+        }
+        speechBalloon.classList.remove('hidden');
     });
-});
-
-
-// Initialize Isotope with vertical layout
-var iso = new Isotope('#projects', {
-    itemSelector: '.project',
-    layoutMode: 'vertical'
 });
 
 
 // Function to update Isotope layout with smooth transitions
 function updateLayout(collapseElement, isExpanding) {
+    
+    // Initialize Isotope with vertical layout
+    var iso = new Isotope('#projects', {
+        itemSelector: '.project',
+        layoutMode: 'vertical'
+    });
+
     if (isExpanding) {
         $(collapseElement).css('display', 'none');
         iso.arrange();
@@ -191,14 +228,116 @@ $('.collapse').on('show.bs.collapse', function () {
 });
 
 
-// Filter items on button click
-var filtersElem = document.querySelector('#filters');
-filtersElem.addEventListener('click', function(event) {
-    if (!event.target.matches('.filter-button')) {
-        return;
+// Modified from https://codepen.io/SohRonery/pen/wvvBLyP
+var itemsPerPageDefault = 5;
+var currentNumberPages = 1;
+var currentPage = 1;
+var currentFilter = '*';
+var filterAtribute = 'data-filter';
+var pageAtribute = 'data-page';
+var pagerClass = 'isotope-pager';
+var $projects = $('#projects').isotope({
+    itemcategory: '.project',
+    layoutMode: 'vertical'
+});
+
+
+// Filter based on input category
+function filterCategory(category) {
+    $projects.isotope({
+        filter: category
+    });
+}
+
+
+// Determine items to be categorized and displayed per page
+function showPage(n) {
+    currentPage = n;
+    var category = '.project';
+        category += ( currentFilter != '*' ) ? '[' + filterAtribute + '="' + currentFilter + '"]' : '';
+        category += '[' + pageAtribute + '="' + currentPage+'"]';
+    filterCategory(category);
+}
+
+
+// Update pager indicator when user clicks previous or next button, and disable buttons as needed
+function updatePager() {
+    var $isotopePager = ($('.' + pagerClass).length == 0 ) ? $('<div class="' + pagerClass + '"></div>') : $('.' + pagerClass);
+    $isotopePager.html('');
+
+    var $previous = $('<button class="pager" id="previous-page">&#8592; previous</button>');
+    $previous.click(function() {
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
+            updatePager();
+            scrollToTopDiv('#research');
+        }
+    });
+    if (currentPage === 1) {
+        $previous.prop('disabled', true);
     }
-    var filterValue = event.target.getAttribute('data-filter');
-    iso.arrange({ filter: filterValue });
+    
+    var $next = $('<button class="pager" id="next-page">next &#8594;</button>');
+    $next.click(function() {
+        if (currentPage < currentNumberPages) {
+            showPage(currentPage + 1);
+            updatePager();
+            scrollToTopDiv('#research');
+        }
+    });
+    if (currentPage === currentNumberPages) {
+        $next.prop('disabled', true);
+    }
+
+    var $currentPageIndicator = $('<span class="current-page">&nbsp; page ' + currentPage + ' of ' + currentNumberPages + ' &nbsp; </span>');
+    
+    $previous.appendTo($isotopePager);
+    $currentPageIndicator.appendTo($isotopePager);
+    $next.appendTo($isotopePager);
+    $projects.after($isotopePager);
+}
+
+
+// Set pagination
+function setPagination() {
+    var SettingsPagesOnItems = function() {
+        var itemsLength = $projects.children('.project').length;
+        var pages = Math.ceil(itemsLength / itemsPerPageDefault);
+        var item = 1;
+        var page = 1;
+        var category = '.project';
+            category += ( currentFilter != '*' ) ? '[' + filterAtribute + '="' + currentFilter + '"]' : '';
+        
+        $projects.children(category).each(function() {
+            if (item > itemsPerPageDefault) {
+                page++;
+                item = 1;
+            }
+            $(this).attr(pageAtribute, page);
+            item++;
+        });
+        currentNumberPages = page;
+    }();
+
+    updatePager();
+}
+
+
+// Set number of pages, return to first page,
+setPagination();
+showPage(1);
+
+
+// Filter projects based on category, including change active buttons, filter projects, 
+// set the number of pages, return to the first page, and update the pager indicator 
+$('#filters .filter-button').click(function() {
+    $('#filters .filter-button').removeClass('active');
+    $(this).addClass('active');
+    var filter = $(this).attr('data-filter');
+    currentFilter = filter;
+    setPagination();
+    showPage(1);
+    updatePager();
 });
 
 
