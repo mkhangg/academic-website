@@ -9,7 +9,7 @@ body.dark-theme {
 }
 
 
-/* Hyperlink styles */
+/* Hyperlink, hightlight, and text styles */
 a {
     color: #bd5d38;
     text-decoration: none;
@@ -19,11 +19,29 @@ a:hover {
     color: #824027;
     text-decoration: underline;
 }
-
-
-/* Grey text for phonetic of name */
+hightlight {
+    color: #bd5d38;
+    text-decoration: none;
+    background-color: transparent;
+}
 .text-primary {
     color: #4c5157 !important;
+}
+
+
+/* Styles for user selection */
+::selection {
+    background-color: #ffb699;
+}
+
+/* Light theme style for user selection */
+.light-theme ::selection {
+    background-color: #ffb699;
+}
+
+/* Dark theme style for user selection */
+.dark-theme ::selection {
+    background-color: #545454;
 }
 
 
@@ -287,6 +305,59 @@ div.gallery img {
 div.desc {
     padding: 8px;
     text-align: center;
+}
+
+
+/* Styles for update cards */
+.news-card {
+    background-color: none;
+    width: 100%;
+    height: 291px;
+    /* height: 365px; */
+    border-radius: 7px;
+    margin: 3px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    /* width: 211px; */
+    display: flex;
+    flex-direction: column;
+}
+.news-desc {
+    flex-grow: 1;
+    padding: 0.4rem 1rem 0rem 1rem;
+    font-size: 13px;
+}
+.news-time {
+    color: grey;
+    padding: 0rem 1rem 0.6rem 1rem;
+    font-size: 12px;
+}
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 60px;
+    padding: 20px;
+    width: 40px;
+    height: 40px; 
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5; 
+}
+.owl-carousel .owl-nav .owl-prev {
+    left: -30px;
+}
+.owl-carousel .owl-nav .owl-next {
+    right: -33px;
+}
+.owl-carousel .owl-dots {
+    display: none;
+}
+.owl-carousel {
+    margin: 0;
+    position: relative;
 }
 
 

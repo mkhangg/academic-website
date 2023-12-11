@@ -1,0 +1,57 @@
+updates:
+
+  - picture: assets/img/updates_gan/city_boy.jpg
+    desc: I will attend IROS 2023 in <hightlight>Detroit, Michigan</hightlight>. 
+    time: October 2023
+  
+  - picture: assets/img/updates_gan/travel_boy.jpg
+    desc: I will present at ISR 2023 in <hightlight>Stuttgart, Germany</hightlight>. 
+    time: September 2023
+
+  - picture: assets/img/updates_gan/holding_can_robot.jpg
+    desc: The <hightlight>deformable object classification</hightlight> paper is accepted to ISR 2023!
+    time: June 2023
+
+  - picture: assets/img/updates_gan/calibrating_robot.jpg
+    desc: The <hightlight>multiplanar self-calibration</hightlight> paper is accepted to IROS 2023!
+    time: June 2023
+
+  - picture: assets/img/updates_gan/fireworks_robot.jpg
+    desc: My <hightlight>thesis proposal</hightlight> is approved by the Honors College!
+    time: June 2023
+
+  - picture: assets/img/updates_gan/reading_boy_2.jpg
+    desc: I am invited to review papers at <hightlight>CASE 2023</hightlight>.
+    time: April 2023
+
+  - picture: assets/img/updates_gan/happy_robot.jpg
+    desc: The <hightlight>PerFC</hightlight> paper is accepted to FLAIRS-36!
+    time: March 2023
+
+  - picture: assets/img/updates_gan/reading_boy.jpg
+    desc: I am invited to review papers at <hightlight>UR 2023</hightlight>.
+    time: February 2023
+  
+  - picture: assets/img/updates_gan/spider_bot.jpg
+    desc: <hightlight>Spidey</hightlight> won sponsorship prizes at HackMIT 2022! 
+    time: October 2022
+
+  - picture: assets/img/updates_gan/boy_robot.jpg
+    desc: I joined the <hightlight>Learning and Adaptive Robotics (LEARN) Lab</hightlight> at UTA.
+    time: August 2022
+    
+  - picture: assets/img/updates_gan/happy_tree.jpg
+    desc: The <hightlight>IoTree</hightlight> paper is accepted to MobiCom 2022!
+    time: June 2022
+
+  - picture: assets/img/updates_gan/farm_bot.jpg
+    desc: <hightlight>iPlanter</hightlight> won prizes at GaTech RoboTech Hackathon 2022!
+    time: April 2022
+    
+  - picture: assets/img/updates_gan/boy_systems.jpg
+    desc: I joined the <hightlight>Wireless and Sensor Systems Lab (WSSL)</hightlight> at UTA.
+    time: August 2021
+
+  - picture: assets/img/updates_gan/boy_school.jpg
+    desc: I start my undergraduate at the <hightlight>University of Texas at Arlington (UTA)</hightlight>.
+    time: August 2020

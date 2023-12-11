@@ -1,0 +1,15 @@
+<!-- Updates section -->
+
+<hr>
+<div class="row" id="updates">
+    <div class="col">
+        <h2 clss="mb-5">📍 updates</h2>
+        <p></p>
+        <div class="owl-carousel owl-theme">
+            {% for update in site.data.updates.updates %}
+                {% include_relative _libs/updates_widget.html %}
+            {% endfor %}
+        </div>
+        <p></p>
+    </div>
+</div>

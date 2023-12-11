@@ -10,6 +10,7 @@ This repository contains source code of [my academic website](https://mkhangg.co
 ## Update
 List of updates (in terms of functionalities):
 
+* **[30 Nov 2023]** Carousel for updates/news items (using [OwlCarousel2](https://owlcarousel2.github.io/OwlCarousel2/)) is added.
 * **[23 Nov 2023]** Filter buttons with categories and Pagination (using [Isotope](https://isotope.metafizzy.co/)) for projects is added.
 * **[19 Nov 2023]** Moving JS particles when dark theme is enabled (like [fireflies](https://en.wikipedia.org/wiki/Firefly)) is added.
 * **[17 Nov 2023]** New webpage scrollbar style and progress bar are added.

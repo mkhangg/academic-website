@@ -87,6 +87,25 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Owl carousel for updates
+function initializeOwlCarousel() {
+    $('.owl-carousel').owlCarousel({
+        loop: false,
+        rewind: false,
+        margin: 10,
+        nav: true,
+        dots: false,
+        lazyLoad: false,
+        slideBy: 'page',
+        responsive: {
+            0: {items: 1.75},
+            600: {items: 3},
+            900: {items: 5},
+            1200: {items: 6}
+        }
+    });
+}
+
 // Touch and mouse event listeners
 let isDragging = false;
 let isMobile = 'ontouchstart' in window;
@@ -323,21 +342,49 @@ function setPagination() {
 }
 
 
-// Set number of pages, return to first page,
-setPagination();
-showPage(1);
-
-
-// Filter projects based on category, including change active buttons, filter projects, 
-// set the number of pages, return to the first page, and update the pager indicator 
-$('#filters .filter-button').click(function() {
-    $('#filters .filter-button').removeClass('active');
-    $(this).addClass('active');
-    var filter = $(this).attr('data-filter');
-    currentFilter = filter;
+function initializeIsotope() {
+    // Set number of pages, return to first page,
     setPagination();
     showPage(1);
-    updatePager();
+
+
+    // Filter projects based on category, including change active buttons, filter projects, 
+    // set the number of pages, return to the first page, and update the pager indicator 
+    $('#filters .filter-button').click(function() {
+        $('#filters .filter-button').removeClass('active');
+        $(this).addClass('active');
+        var filter = $(this).attr('data-filter');
+        currentFilter = filter;
+        setPagination();
+        showPage(1);
+        updatePager();
+    });
+}
+
+
+// // Guarantee correct layouts when all web resources are fully loaded 
+// This version is slow --> only re-layout when all the gifs are fully loaded
+// $(window).on('load', function() {
+//     initializeOwlCarousel();
+//     initializeIsotope();
+// });
+// This version is faster --> re-layout when all the images are fully loaded not neccessarily all the gifs
+$(document).ready(function() {
+    var Images = $('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]').get();
+    var imageLoadPromises = Images.map(function(img) {
+        return new Promise(function(resolve) {
+            if (img.complete) {
+                resolve();
+            } else {
+                img.onload = resolve;
+            }
+        });
+    });
+
+    Promise.all(imageLoadPromises).then(function() {
+        initializeOwlCarousel();
+        initializeIsotope();
+    });
 });
 
 
