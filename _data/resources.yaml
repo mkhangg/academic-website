@@ -1,0 +1,41 @@
+introduction: all software releases of the above projects can also be found here!
+
+categories:
+
+  - data-filter: research
+    category-name: research
+
+  - data-filter: outreach
+    category-name: outreach
+  
+  - data-filter: misc
+    category-name: miscellaneous
+
+links:
+
+  - git-api: https://api.github.com/repos/mkhangg/refined_panoptic_mapping
+    category: research
+
+  - git-api: https://api.github.com/repos/mkhangg/semantic_scene_perception
+    category: research
+  
+  - git-api: https://api.github.com/repos/mkhangg/academic-website
+    category: misc
+
+  - git-api: https://api.github.com/repos/mkhangg/deformable_cobot
+    category: research
+
+  - git-api: https://api.github.com/repos/mkhangg/calib_cobot
+    category: research
+
+  - git-api: https://api.github.com/repos/mkhangg/perception_framework
+    category: research
+
+  - git-api: https://api.github.com/repos/mkhangg/hackmit22
+    category: outreach
+
+  - git-api: https://api.github.com/repos/tuantdang/iotree
+    category: research
+
+  - git-api: https://api.github.com/repos/mkhangg/robotech22
+    category: outreach

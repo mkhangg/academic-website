@@ -12,11 +12,11 @@ projects:
   - title: Real-Time 3D Semantic Scene Perception for Egocentric Robots with Binocular Vision
     system-name: 
     gif: assets/img/demo_scene_perception.gif
-    conference: ICRA 2024 (Yokohama, Japan)
-    conference-web: https://2024.ieee-icra.org/
-    status: Under Review
+    conference: arXiv (02/19/2024)
+    conference-web: 
+    status:
     authors: <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
-    pdf: 
+    pdf: https://arxiv.org/pdf/2402.11872.pdf
     code: https://github.com/mkhangg/semantic_scene_perception
     demo: https://youtu.be/-dho7l_r56U
     slides: 
@@ -33,7 +33,7 @@ projects:
     conference-web: https://www.isr-robotics.org/isr
     status: 
     authors: <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
-    pdf: https://www.researchgate.net/profile/Khang-Nguyen-133/publication/374371098_Online_3D_Deformable_Object_Classification_for_Mobile_Cobot_Manipulation/links/651a2cfa1e2386049def3947/Online-3D-Deformable-Object-Classification-for-Mobile-Cobot-Manipulation.pdf
+    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10363065
     code: https://github.com/mkhangg/deformable_cobot
     demo: https://youtu.be/qkgi3T6xYzI
     slides: https://mkhangg.com/assets/slides/isr23_slides.pdf
@@ -50,7 +50,7 @@ projects:
     conference-web: https://ieee-iros.org/
     status: 
     authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
-    pdf: https://www.researchgate.net/profile/Tuan-Dang-25/publication/374503139_Multiplanar_Self-Calibration_for_Mobile_Cobot_3D_Object_Manipulation_using_2D_Detectors_and_Depth_Estimation/links/6520351ab0df2f20a2163da6/Multiplanar-Self-Calibration-for-Mobile-Cobot-3D-Object-Manipulation-using-2D-Detectors-and-Depth-Estimation.pdf
+    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10341911
     code: https://github.com/tuantdang/calib_cobot
     demo: https://youtu.be/KrDJ22rvOAo
     slides: 

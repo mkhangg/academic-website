@@ -26,6 +26,7 @@ hightlight {
 }
 .text-primary {
     color: #4c5157 !important;
+    font-size: 29px;
 }
 
 
@@ -48,12 +49,39 @@ hightlight {
 /* Code-style text for research interest */
 code {
     font-family: "Consolas";
-    color: rgb(0, 0, 0);
+    color: #333;
     background-color: #f1f1f1;
-    padding: 2px;
-    padding-left: 5px;
-    opacity: 0.75;
-    font-size: 86%;
+    padding: 2px 4px 2px 4px;
+    font-size: 83%;
+    border-radius: 5px;
+}
+.light-theme code {
+    color: #fff;
+    background-color: #909090;
+}
+.dark-theme code {
+    color: #333;
+    background-color: #f1f1f1;
+}
+
+/* Code container styles */
+.codebox {
+    font-family: "Consolas";
+    color: #333;
+    border-left: 4px solid #4a5568;
+    padding: 0.25rem 0 0.25rem 0.75rem;
+    opacity: 0.85;
+    font-size: 89%;
+    /* border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; */
+}
+.light-theme .codebox {
+    color: #333;
+    background-color: #f5f5f5;
+}
+.dark-theme .codebox {
+    color: #fff;
+    background-color: #2d2d2d;
 }
 
 
@@ -191,6 +219,17 @@ code {
 }
 
 
+/* Styles for volume emoji */
+#volumeEmoji {
+    cursor: pointer;
+    font-size: 21px;
+    user-select: none;
+}
+#volumeEmoji:focus {
+    outline: none;
+}
+
+
 /* Styles for project list */
 #projects {
     margin: 0px;
@@ -201,7 +240,7 @@ code {
 
 
 /* Styles for filter buttons */
-#filters .filter-button {
+#filters-project .filter-button {
     padding: 4px 7px;
     border: 1px solid #333333;
     border-radius: 10px;
@@ -210,36 +249,36 @@ code {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-#filters .filter-button:hover {
+#filters-project .filter-button:hover {
     background-color: rgba(194, 194, 194, 0.45);
 }
-#filters .filter-button.active {
+#filters-project .filter-button.active {
     background-color: rgba(194, 194, 194, 0.45);
 }
 
 
 /* Light theme styles for filter button */
-.light-theme #filters .filter-button {
+.light-theme #filters-project .filter-button {
     border: 1px solid #333333;
     color: #333333;
 }
 
 
 /* Dark theme styles for filter button */
-.dark-theme #filters .filter-button {
+.dark-theme #filters-project .filter-button {
     border: 1px solid #ffffff;
     color: #ffffff;
 }
 
 
 /* Styles for pager buttons */
-.isotope-pager {
+.isotope-pager-project {
     display: flex;
     list-style-type: none;
     align-items: center;
     justify-content: center;
 }
-.isotope-pager .pager {
+.isotope-pager-project .pager {
     display: block;
     padding: 4px 7px;
     background-color: transparent;
@@ -247,31 +286,81 @@ code {
     margin: 0 5px;
     border-radius: 7px;
 }
-.isotope-pager .pager:hover {
+.isotope-pager-project .pager:hover {
     background-color: rgba(194, 194, 194, 0.45);
     cursor: pointer;
 }
-.isotope-pager .pager.active {
+.isotope-pager-project .pager.active {
     background-color: rgba(194, 194, 194, 0.45);
 }
 
 
 /* Light theme styles for pager button */
-.light-theme .isotope-pager .pager {
+.light-theme .isotope-pager-project .pager {
     border: 1px solid #333333;
     color: #333333;
 }
 
 
 /* Dark theme styles for pager button */
-.dark-theme .isotope-pager .pager {
+.dark-theme .isotope-pager-project .pager {
     border: 1px solid #ffffff;
     color: #ffffff;
 }
 
 
 /* Disabled stye for pager buttons */
-.isotope-pager .pager:disabled {
+.isotope-pager-project .pager:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+    opacity: 0.5;
+    border: 1px solid #aaaaaa;
+}
+
+
+
+
+/* Styles for pager buttons */
+.isotope-pager-github {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+.isotope-pager-github .pager {
+    display: block;
+    padding: 4px 7px;
+    background-color: transparent;
+    border: 1px solid #333333;
+    margin: 0 5px;
+    border-radius: 7px;
+}
+.isotope-pager-github .pager:hover {
+    background-color: rgba(194, 194, 194, 0.45);
+    cursor: pointer;
+}
+.isotope-pager-github .pager.active {
+    background-color: rgba(194, 194, 194, 0.45);
+}
+
+
+/* Light theme styles for pager button */
+.light-theme .isotope-pager-github .pager {
+    border: 1px solid #333333;
+    color: #333333;
+}
+
+
+/* Dark theme styles for pager button */
+.dark-theme .isotope-pager-github .pager {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+
+/* Disabled stye for pager buttons */
+.isotope-pager-github .pager:disabled {
     background-color: #cccccc;
     color: #666666;
     cursor: default;
@@ -283,6 +372,38 @@ code {
 /* More/Less button for widgets */
 .collapse.in { 
     display: inline !important; 
+}
+
+
+/* Styles for filter buttons */
+#filters-resources .filter-button {
+    padding: 4px 7px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+#filters-resources .filter-button:hover {
+    background-color: rgba(194, 194, 194, 0.45);
+}
+#filters-resources .filter-button.active {
+    background-color: rgba(194, 194, 194, 0.45);
+}
+
+
+/* Light theme styles for filter button */
+.light-theme #filters-resources .filter-button {
+    border: 1px solid #333333;
+    color: #333333;
+}
+
+
+/* Dark theme styles for filter button */
+.dark-theme #filters-resources .filter-button {
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 
@@ -358,6 +479,109 @@ div.desc {
 .owl-carousel {
     margin: 0;
     position: relative;
+}
+
+
+/* Styles for Github cards container */
+#github-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 1600px;
+    margin: 15px;
+}
+
+
+/* Styles for GitHub cards */
+.github-card {
+    flex: 0 1 calc(50% - 20px);
+    margin: 0px 15px 10px 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    width: 500px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.dark-theme .github-card {
+    background-color: #292929;
+    color: #ffffff;
+    border-color: #343434;
+}
+@media (max-width: 768px) {
+    .github-card {
+        flex: 0 1 100%;
+        width: auto;
+    }
+}
+
+
+/* Styles for repository information */
+.repo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.repo-header .bookmark-icon {
+    margin-right: 8px;
+    color: #586069;
+}
+.repo-name {
+    font-weight: 500;
+    color: #0366d6;
+    font-size: 16px;
+    text-decoration: none;
+}
+.repo-name:hover {
+    text-decoration: underline;
+    color: #0366d6;
+}
+.dark-theme .repo-name:hover {
+    text-decoration: underline;
+    color: #0366d6;
+}
+.repo-description {
+    font-size: 13px;
+    color: #586069;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+.stats-number {
+    margin-left: 4px;
+}
+.repo-stats {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.repo-stats > * {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+.repo-stats i {
+    margin-right: 8px;
+}
+.language-icon {
+    color: #007bff;
+    margin-right: 8px;
+}
+.dark-theme .repo-description,
+.dark-theme .stats-number,
+.dark-theme .language {
+    color: #ffffff;
+}
+.star-icon {
+    color: #ffc107;
+}
+.fork-icon {
+    color: #333;
+}
+.dark-theme .bookmark-icon,
+.dark-theme .fork-icon {
+    color: #bbbbbb;
 }
 
 

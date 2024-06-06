@@ -8,8 +8,7 @@
                     <img class="profile-image" src="{{ site.data.about.profile-pic }}" alt="{{ site.data.about.name }}">
                     {% if site.data.about.emoji %} 
                         <div class="emoji-indicator">
-                            {{ site.data.about.emoji }} 
-                            <span class="hover-text"> {{ site.data.about.desc-emoji }} </span> 
+                            {{ site.data.about.emoji }} <span class="hover-text"> {{ site.data.about.desc-emoji }} </span> 
                         </div> 
                     {% endif %}
                 </div>
@@ -27,13 +26,22 @@
     </div>
 
     <div class="col-lg-10 col-md-8">
-        <h2>{{ site.data.about.name }} {% if site.data.about.pronunciation %}<span class="text-primary">{{ site.data.about.pronunciation }}</span>{% endif %}</h2>
+        <h2>
+            {{ site.data.about.name }} 
+            {% if site.data.about.pronunciation %} <span class="text-primary"> {{ site.data.about.pronunciation }} </span> {% endif %}
+            {% if site.data.about.pronunciation-emoji %} <span id="volumeEmoji" role="button"> {{ site.data.about.pronunciation-emoji }} </span> {% endif %}
+        </h2>
         <p></p>
         {{ site.data.about.first-paragraph }}
         <p></p>
         {{ site.data.about.second-paragraph }}      
         <p></p>
-        <code>>> {{ site.data.about.research-interest }}</code>
-        <!-- <p></p> -->
+        <div class="codebox">
+            {{ site.data.about.research-introduction }}
+            <p></p> 
+            {% for interest in site.data.about.research-interests %}
+                {% include_relative _libs/about_widget.html %}
+            {% endfor %}
+        </div>
     </div>
 </div>

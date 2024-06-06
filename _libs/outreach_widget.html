@@ -10,12 +10,12 @@
         <br>
         {{ mini-project.team }}
         <br>
-        {% if mini-project.post %} <a href="{{ mini-project.post }}" target="_blank" rel="noopener">[POST]</a> {% endif %}
+        {% if mini-project.post %} <a href="{{ mini-project.post }}" target="_blank" rel="noopener">[POST]</a> {% else %} <a href="">[POST]</a> {% endif %}
         {% if mini-project.code %} | <a href="{{ mini-project.code }}" target="_blank" rel="noopener">[CODE]</a> {% endif %}
         {% if mini-project.demo %} | <a href="{{ mini-project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
         <br>
         <u><b><i>Description</i></b>:</u> {{ mini-project.description }}
         <br>
-        <u><b><i>Prize</i></b>:</u> {{ mini-project.prize }}
+        {% if mini-project.prize %} <u><b><i>Prize</i></b>:</u> {{ mini-project.prize }} {% endif %}
     </div>
 </div>

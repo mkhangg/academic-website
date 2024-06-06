@@ -12,7 +12,7 @@
             <br>
             {{ project.authors }}
             <br>
-            {% if project.code %} <a href="{{ project.pdf }}" target="_blank" rel="noopener">[PDF]</a> {% endif %}
+            {% if project.pdf %} <a href="{{ project.pdf }}" target="_blank" rel="noopener">[PDF]</a> {% else %} <a href="">[PDF]</a> {% endif %}
             {% if project.code %} | <a href="{{ project.code }}" target="_blank" rel="noopener">[CODE]</a> {% endif %}
             {% if project.demo %} | <a href="{{ project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
             {% if project.slides %} | <a href="{{ project.slides }}" target="_blank" rel="noopener">[SLIDES]</a> {% endif %}

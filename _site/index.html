@@ -28,7 +28,7 @@
 
     </head>
 
-    <body class="light-theme">
+    <body>
 
         <!-- Moving particles -->
         <canvas id="canvas"></canvas>
@@ -54,7 +54,7 @@
         <div class="dismissal-area" id="dismissalArea">&#10006;</div>
 
         <!-- Content -->
-        <div class="container mt-5">
+        <div class="container" style="padding-top: 3rem;">
             <!-- About section -->
 
 <div class="row mb-4">
@@ -65,8 +65,7 @@
                     <img class="profile-image" src="assets/img/new_pic.jpg" alt="khang nguyen" />
                      
                         <div class="emoji-indicator">
-                            🍀 
-                            <span class="hover-text"> four-leaf clover </span> 
+                            🍀 <span class="hover-text"> four-leaf clover </span> 
                         </div> 
                     
                 </div>
@@ -84,14 +83,27 @@
     </div>
 
     <div class="col-lg-10 col-md-8">
-        <h2>khang nguyen <span class="text-primary">/kʰæŋ/</span></h2>
+        <h2>
+            khang nguyen 
+             <span class="text-primary"> /kʰæŋ/ </span> 
+             <span id="volumeEmoji" role="button"> 🎧 </span> 
+        </h2>
         <p></p>
-        I am currently a fourth-year Computer Science undergraduate at the <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse" target="_blank" rel="noopener">University of Texas at Arlington</a> and a research assistant at the <hightlight>Learning and Adaptive Robotics Lab</hightlight>, where I am advised by <a href="https://www.uta.edu/academics/faculty/profile?username=huber" target="_blank" rel="noopener">Dr. Manfred Huber</a>. (◕▿◕)
+        I am a research assistant at the <hightlight>Learning and Adaptive Robotics (LEARN) Lab</hightlight> affiliated with the <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse" target="_blank" rel="noopener">University of Texas at Arlington</a> under the guidance of <a href="https://www.uta.edu/academics/faculty/profile?username=huber" target="_blank" rel="noopener">Dr. Manfred Huber</a>. (◕▿◕)
         <p></p>
         I grew up in <a href="https://en.wikipedia.org/wiki/Saigon" target="_blank" rel="noopener">Saigon, Vietnam</a>, and was fortunate to spend my most memorable time at the <a href="https://en.wikipedia.org/wiki/VNU-HCM_High_School_for_the_Gifted" target="_blank" rel="noopener">VNU-HCM High School for the Gifted</a> (informatics program of 2020) and previously <a href="https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_%C4%90%E1%BA%A1i_Ngh%C4%A9a_High_School_for_the_Gifted" target="_blank" rel="noopener">TĐN Secondary School for the Gifted</a> (mathematics program of 2017) with very good friends - too many to name them here, where we played football (soccer) on concrete fields together afterschool.      
         <p></p>
-        <code>&gt;&gt; I do research in robotics, mainly focusing on applying <b>cognitive architectures to robotic grasping</b> to enable robots with a closely similar human grasping capability. Just imagine the robot enters the kitchen, finds a banana, grasps without crushing it, and brings it back to you.</code>
-        <!-- <p></p> -->
+        <div class="codebox">
+            I do research in robotics, mainly focusing on applying <code>cognitive architectures to robotic grasping</code> to enable robots with a closely similar human grasping capability. Just imagine the robot enters the kitchen, finds a banana, grasps without crushing it, and brings it back to you.
+            <p></p> 
+            
+                <b>Robotic Perception:</b> semantic scene understanding, perception for grasping 
+<br />
+            
+                <b>Robotic Manipulation:</b> learning to grasp, manipulative visual-motor skills 
+<br />
+            
+        </div>
     </div>
 </div>
 
@@ -104,6 +116,18 @@
         <h2 clss="mb-5">📍 updates</h2>
         <p></p>
         <div class="owl-carousel owl-theme">
+            
+                <div class="news-card">
+    <img src="assets/img/updates_gan/lab_boy.jpg" class="w-full rounded-lg" />
+    <div class="news-desc">I will continue my <hightlight>PhD studies in robotics</hightlight> at the LEARN Lab.</div>
+    <div class="news-time">May 2024</div>
+</div>
+            
+                <div class="news-card">
+    <img src="assets/img/updates_gan/graduation_boy.jpg" class="w-full rounded-lg" />
+    <div class="news-desc">I finished my <hightlight>undergrad studies in computer science</hightlight> at UTA.</div>
+    <div class="news-time">May 2024</div>
+</div>
             
                 <div class="news-card">
     <img src="assets/img/updates_gan/city_boy.jpg" class="w-full rounded-lg" />
@@ -185,7 +209,7 @@
             
                 <div class="news-card">
     <img src="assets/img/updates_gan/boy_school.jpg" class="w-full rounded-lg" />
-    <div class="news-desc">I start my undergraduate at the <hightlight>University of Texas at Arlington (UTA)</hightlight>.</div>
+    <div class="news-desc">I start my undergrad at the <hightlight>University of Texas at Arlington (UTA)</hightlight>.</div>
     <div class="news-time">August 2020</div>
 </div>
             
@@ -202,7 +226,7 @@
     <div class="col">
         <h2 clss="mb-5">📍 publications</h2>
         <p></p>
-        <div id="filters">
+        <div id="filters-project">
             <button class="filter-button active" data-filter="*">all</button>
             
                 <button class="filter-button" data-filter="perception manipulation">perception + manipulation</button>
@@ -222,12 +246,12 @@
             
             <b>Real-Time 3D Semantic Scene Perception for Egocentric Robots with Binocular Vision</b>
             <br />
-            <i><a href="https://2024.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2024 (Yokohama, Japan)</a></i> 
-             <b style="color: #e74d3c">[Under Review]</b> 
+            <i><a href="" target="_blank" rel="noopener">arXiv (02/19/2024)</a></i> 
+            
             <br />
             <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
             <br />
-             <a href="" target="_blank" rel="noopener">[PDF]</a> 
+             <a href="https://arxiv.org/pdf/2402.11872.pdf" target="_blank" rel="noopener">[PDF]</a> 
              | <a href="https://github.com/mkhangg/semantic_scene_perception" target="_blank" rel="noopener">[CODE]</a> 
              | <a href="https://youtu.be/-dho7l_r56U" target="_blank" rel="noopener">[DEMO]</a> 
             
@@ -258,7 +282,7 @@
             <br />
             <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
             <br />
-             <a href="https://www.researchgate.net/profile/Khang-Nguyen-133/publication/374371098_Online_3D_Deformable_Object_Classification_for_Mobile_Cobot_Manipulation/links/651a2cfa1e2386049def3947/Online-3D-Deformable-Object-Classification-for-Mobile-Cobot-Manipulation.pdf" target="_blank" rel="noopener">[PDF]</a> 
+             <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=10363065" target="_blank" rel="noopener">[PDF]</a> 
              | <a href="https://github.com/mkhangg/deformable_cobot" target="_blank" rel="noopener">[CODE]</a> 
              | <a href="https://youtu.be/qkgi3T6xYzI" target="_blank" rel="noopener">[DEMO]</a> 
              | <a href="https://mkhangg.com/assets/slides/isr23_slides.pdf" target="_blank" rel="noopener">[SLIDES]</a> 
@@ -289,7 +313,7 @@
             <br />
             Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
             <br />
-             <a href="https://www.researchgate.net/profile/Tuan-Dang-25/publication/374503139_Multiplanar_Self-Calibration_for_Mobile_Cobot_3D_Object_Manipulation_using_2D_Detectors_and_Depth_Estimation/links/6520351ab0df2f20a2163da6/Multiplanar-Self-Calibration-for-Mobile-Cobot-3D-Object-Manipulation-using-2D-Detectors-and-Depth-Estimation.pdf" target="_blank" rel="noopener">[PDF]</a> 
+             <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=10341911" target="_blank" rel="noopener">[PDF]</a> 
              | <a href="https://github.com/tuantdang/calib_cobot" target="_blank" rel="noopener">[CODE]</a> 
              | <a href="https://youtu.be/KrDJ22rvOAo" target="_blank" rel="noopener">[DEMO]</a> 
             
@@ -415,6 +439,29 @@
         
             <div class="row mb-4">
     <div class="col-sm-4">
+        <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/demo_outdoor_nav.gif" />
+    </div>
+    <div class="col-sm-8">
+        
+        <b>Autonomous Waypoint Navigation with GPS and ArduRover</b>
+        <br />
+        <i><a href="" target="_blank" rel="noopener">UVS Design (Arlington, TX, U.S.)</a></i>
+        <br />
+        Kevin Mathew, Jesus Garza Munoz, Benjamin Nguyen, <u>Khang Nguyen</u>.
+        <br />
+         <a href="">[POST]</a> 
+        
+         | <a href="https://youtu.be/5QHfGqPYY8Y" target="_blank" rel="noopener">[DEMO]</a> 
+        <br />
+        <u><b><i>Description</i></b>:</u> We design the rover platform with hardware-software integration for autonomous waypoint navigation using Here3 GPS and ArduRover for outdoor activities. The video demonstrates the rover's mission to go through 10 defined waypoints on the UTA campus through Mission Planner via wireless communication through the Hex cube (Pixhawk 2.1) controller.
+        <br />
+        
+    </div>
+</div>
+
+        
+            <div class="row mb-4">
+    <div class="col-sm-4">
         <img width="100%" height="auto" class="w-full rounded-lg" src="assets/img/demo_spidey.gif" />
     </div>
     <div class="col-sm-8">
@@ -431,7 +478,7 @@
         <br />
         <u><b><i>Description</i></b>:</u> We present an autonomous spatial voice localization crawling robot demonstrating the potential of assistive technology for people with visual impairment to ask for help whenever they are in a spatial area without physical assistance.
         <br />
-        <u><b><i>Prize</i></b>:</u> Won Sponsorship Award for Assistive Technologies over 198 competing teams.
+         <u><b><i>Prize</i></b>:</u> Won Sponsorship Award for Assistive Technologies over 198 competing teams. 
     </div>
 </div>
 
@@ -454,11 +501,84 @@
         <br />
         <u><b><i>Description</i></b>:</u> Our tree planting robot demonstrates the an on-farm surveying robot that autonomously determines soil quality, plants seeds, and collects on-ground images.
         <br />
-        <u><b><i>Prize</i></b>:</u> Won 2nd place in Body Track, 3rd place in Electrical Track, and Top 8 Prizes over 47 competing teams (approximately 160 participants).
+         <u><b><i>Prize</i></b>:</u> Won 2nd place in Body Track, 3rd place in Electrical Track, and Top 8 Prizes over 47 competing teams (approximately 160 participants). 
     </div>
 </div>
 
         
+        <p></p>
+    </div>
+</div>
+
+<!-- Resources section -->
+
+<hr />
+
+<div class="row" id="resources">
+    <div class="col">
+        <h2 clss="mb-5">📍 resources</h2>
+        <p></p>
+        all software releases of the above projects can also be found here!
+        <p></p>
+        <div id="filters-resources">
+            <button class="filter-button active" data-filter="*">all</button>
+            
+                <button class="filter-button" data-filter="research">research</button>
+            
+                <button class="filter-button" data-filter="outreach">outreach</button>
+            
+                <button class="filter-button" data-filter="misc">miscellaneous</button>
+            
+        </div>
+        <p></p>
+        <div id="github-cards" class="isotope">
+            
+                <div class="github-card" data-filter="research">
+    <div data-url="https://api.github.com/repos/mkhangg/refined_panoptic_mapping"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="research">
+    <div data-url="https://api.github.com/repos/mkhangg/semantic_scene_perception"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="misc">
+    <div data-url="https://api.github.com/repos/mkhangg/academic-website"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="research">
+    <div data-url="https://api.github.com/repos/mkhangg/deformable_cobot"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="research">
+    <div data-url="https://api.github.com/repos/mkhangg/calib_cobot"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="research">
+    <div data-url="https://api.github.com/repos/mkhangg/perception_framework"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="outreach">
+    <div data-url="https://api.github.com/repos/mkhangg/hackmit22"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="research">
+    <div data-url="https://api.github.com/repos/tuantdang/iotree"></div>
+</div>
+
+            
+                <div class="github-card" data-filter="outreach">
+    <div data-url="https://api.github.com/repos/mkhangg/robotech22"></div>
+</div>
+
+            
+        </div>
         <p></p>
     </div>
 </div>
@@ -556,7 +676,10 @@
 
         <!-- OwlCarousel2 JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        
+
+        <!-- Axios JS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 		<!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 

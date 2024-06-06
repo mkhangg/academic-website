@@ -1,5 +1,17 @@
 mini-projects:
 
+  - title: Autonomous Waypoint Navigation with GPS and ArduRover
+    system-name: 
+    gif: assets/img/demo_outdoor_nav.gif
+    event: UVS Design (Arlington, TX, U.S.)
+    event-web: 
+    team: Kevin Mathew, Jesus Garza Munoz, Benjamin Nguyen, <u>Khang Nguyen</u>.
+    post: 
+    code: 
+    demo: https://youtu.be/5QHfGqPYY8Y
+    description: We design the rover platform with hardware-software integration for autonomous waypoint navigation using Here3 GPS and ArduRover for outdoor activities. The video demonstrates the rover's mission to go through 10 defined waypoints on the UTA campus through Mission Planner via wireless communication through the Hex cube (Pixhawk 2.1) controller.
+    prize: 
+
   - title: An Autonomous Spatial Voice Localization Crawling Robot
     system-name: Spidey
     gif: assets/img/demo_spidey.gif
