@@ -202,9 +202,8 @@ function progressBar() {
 
 // Scripts to activate/deactivate contact info card 
 var overlaybg = document.getElementById('overlay-bg');
-var contactCardTrigger = document.getElementById('contact-card-trigger');
 
-contactCardTrigger.onclick = function() {
+document.getElementById('contact-card-trigger').onclick = function() {
     overlaybg.style.display = 'flex';
 };
 
@@ -212,6 +211,14 @@ overlaybg.addEventListener('click', function(event) {
     if (event.target === overlaybg) {
         overlaybg.style.display = 'none';
     }
+});
+
+
+// Play the flipping-card sound when user flips the contact info card
+document.getElementById('front_end_card').addEventListener('click', function() {
+    this.classList.toggle('flip');
+    const flipAudio = new Audio('assets/sounds/flipcard_sound.mp3');
+    flipAudio.play();
 });
 
 
