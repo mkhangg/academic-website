@@ -15,14 +15,53 @@
             </div>
         </div>
         <hr>
-        <div class="social-icons">	
+        <div class="social-icons">
             {% if site.data.about.scholar %} <a class="social-icon" href="{{ site.data.about.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> {% endif %}
             {% if site.data.about.researchgate %} <a class="social-icon" href="{{ site.data.about.researchgate }}" target="_blank" rel="noopener" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 35px; color: #00D0BB"></i></a> {% endif %}
             {% if site.data.about.github %} <a class="social-icon" href="{{ site.data.about.github }}" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> {% endif %}
             {% if site.data.about.youtube %} <a class="social-icon" href="{{ site.data.about.youtube }}" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube" style="font-size: 35px; color: #FF0000"></i></a> {% endif %}
             {% if site.data.about.resume %} <a class="social-icon" href="{{ site.data.about.resume }}" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> {% endif %}
         </div>
+        <div class="social-icons">
+            {% if site.data.about.projects %} <a class="social-icon" href="#research" title="Projects"><i class="fa fa-shapes" style="font-size: 35px; color: #e8828c"></i></a> {% endif %}
+            {% if site.data.about.orcid %} <a class="social-icon" href="{{ site.data.about.orcid }}" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid" style="font-size: 35px; color: #a6ce39"></i></a> {% endif %}
+            {% if site.data.about.contact %} <a class="social-icon" id="contact-card-trigger" title="Contact Info"><i class="fa fa-id-card" style="font-size: 35px; color: #cbbb5f"></i></a> {% endif %}
+        </div>
         <p></p>
+    </div>
+
+    <!-- Inspired by Thanh Tran -- https://codepen.io/thanhrossi/pen/pvOEzq -->
+    <!-- Re-written, redesigned, and integrated (from HTML (Pug) and CSS (Less) to traditional HTML and CSS) -->
+    <div class="contact-card-overlay" id="overlay-bg">
+        <div class="information_card">
+            <div id="front_end_card" onclick="this.classList.toggle('flip');">
+
+                <div class="front">
+                    <div class="contact-info-card">
+                        <div class="code-line"><span class="line-number">1</span><span class="code-content"><span class="keyword">class</span> <span class="namespace">ContactInformationCard</span>: </span></div>
+                        <div class="code-line"><span class="line-number">2</span><span class="code-content">  <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">3</span><span class="code-content">    <span class="self">self</span>.<span class="self">dept</span>  = <span class="string">"{{ site.data.about.dept }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">4</span><span class="code-content">    <span class="self">self</span>.<span class="self">lab</span>   = <span class="string">"{{ site.data.about.lab }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">5</span><span class="code-content">    <span class="self">self</span>.<span class="self">email</span> = <span class="string">"{{ site.data.about.email }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">6</span><span class="code-content">    <span class="self">self</span>.<span class="self">phone</span> = <span class="string">"{{ site.data.about.phone }}"</span> </span></div>
+                        <div class="code-line"><span class="line-number">7</span><span class="code-content"></span></div>
+                        <div class="code-line"><span class="line-number">8</span><span class="code-content">  <span class="keyword">def</span> <span class="function">flipCard</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">9</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap on the card to flip."</span>)</span></div>
+                        <div class="code-line"><span class="line-number">10</span><span class="code-content"></span></div>
+                        <div class="code-line"><span class="line-number">11</span><span class="code-content">  <span class="keyword">def</span> <span class="function">closeCard</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">12</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap outside to close it."</span>)</span></div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="contact-info-card">
+                        <p class="card-name">{{ site.data.about.name }}</p>
+                        <a href="{{ site.data.about.website }}" target="_blank" rel="noopener" class="card-website-link" title="Website">{{ site.data.about.web-dns }}</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <div class="col-lg-10 col-md-8">

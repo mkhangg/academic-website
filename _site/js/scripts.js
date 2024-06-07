@@ -200,6 +200,21 @@ function progressBar() {
 }
 
 
+// Scripts to activate/deactivate contact info card 
+var overlaybg = document.getElementById('overlay-bg');
+var contactCardTrigger = document.getElementById('contact-card-trigger');
+
+contactCardTrigger.onclick = function() {
+    overlaybg.style.display = 'flex';
+};
+
+overlaybg.addEventListener('click', function(event) {
+    if (event.target === overlaybg) {
+        overlaybg.style.display = 'none';
+    }
+});
+
+
 // Get all filter buttons and change their active status as user clicks
 var filterButtonsProject = document.querySelectorAll('#filters-project .filter-button'); 
 var filterButtonsGithub = document.querySelectorAll('#filters-resources .filter-button'); 

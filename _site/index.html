@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -72,14 +73,53 @@
             </div>
         </div>
         <hr />
-        <div class="social-icons">	
+        <div class="social-icons">
              <a class="social-icon" href="https://scholar.google.com/citations?user=Z6_5ZTEAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa fa-graduation-cap" style="font-size: 35px; color: #4285f4"></i></a> 
              <a class="social-icon" href="https://www.researchgate.net/profile/Khang-Nguyen-133" target="_blank" rel="noopener" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 35px; color: #00D0BB"></i></a> 
              <a class="social-icon" href="https://github.com/mkhangg" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" style="font-size: 35px; color: #171515"></i></a> 
              <a class="social-icon" href="https://www.youtube.com/@_m.khangg_" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube" style="font-size: 35px; color: #FF0000"></i></a> 
              <a class="social-icon" href="assets/doc/Resume_KhangNguyen.pdf" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> 
         </div>
+        <div class="social-icons">
+             <a class="social-icon" href="#research" title="Projects"><i class="fa fa-shapes" style="font-size: 35px; color: #e8828c"></i></a> 
+             <a class="social-icon" href="https://orcid.org/my-orcid?orcid=0000-0003-3471-5533" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid" style="font-size: 35px; color: #a6ce39"></i></a> 
+             <a class="social-icon" id="contact-card-trigger" title="Contact Info"><i class="fa fa-id-card" style="font-size: 35px; color: #cbbb5f"></i></a> 
+        </div>
         <p></p>
+    </div>
+
+    <!-- Inspired by Thanh Tran -- https://codepen.io/thanhrossi/pen/pvOEzq -->
+    <!-- Re-written, redesigned, and integrated (from HTML (Pug) and CSS (Less) to traditional HTML and CSS) -->
+    <div class="contact-card-overlay" id="overlay-bg">
+        <div class="information_card">
+            <div id="front_end_card" onclick="this.classList.toggle('flip');">
+
+                <div class="front">
+                    <div class="contact-info-card">
+                        <div class="code-line"><span class="line-number">1</span><span class="code-content"><span class="keyword">class</span> <span class="namespace">ContactInformationCard</span>: </span></div>
+                        <div class="code-line"><span class="line-number">2</span><span class="code-content">  <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">3</span><span class="code-content">    <span class="self">self</span>.<span class="self">dept</span>  = <span class="string">"cse @ uta"</span> </span></div>
+                        <div class="code-line"><span class="line-number">4</span><span class="code-content">    <span class="self">self</span>.<span class="self">lab</span>   = <span class="string">"learn lab @ erb 128"</span> </span></div>
+                        <div class="code-line"><span class="line-number">5</span><span class="code-content">    <span class="self">self</span>.<span class="self">email</span> = <span class="string">"khang.nguyen@uta.edu"</span> </span></div>
+                        <div class="code-line"><span class="line-number">6</span><span class="code-content">    <span class="self">self</span>.<span class="self">phone</span> = <span class="string">"+1 (470) 815-5812"</span> </span></div>
+                        <div class="code-line"><span class="line-number">7</span><span class="code-content"></span></div>
+                        <div class="code-line"><span class="line-number">8</span><span class="code-content">  <span class="keyword">def</span> <span class="function">flipCard</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">9</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap on the card to flip."</span>)</span></div>
+                        <div class="code-line"><span class="line-number">10</span><span class="code-content"></span></div>
+                        <div class="code-line"><span class="line-number">11</span><span class="code-content">  <span class="keyword">def</span> <span class="function">closeCard</span>(<span class="self">self</span>):</span></div>
+                        <div class="code-line"><span class="line-number">12</span><span class="code-content">    <span class="function">print</span>(<span class="string">"tap outside to close it."</span>)</span></div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="contact-info-card">
+                        <p class="card-name">khang nguyen</p>
+                        <a href="https://mkhangg.com/" target="_blank" rel="noopener" class="card-website-link" title="Website">mkhangg.com</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <div class="col-lg-10 col-md-8">
