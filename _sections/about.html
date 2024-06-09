@@ -23,7 +23,8 @@
             {% if site.data.about.resume %} <a class="social-icon" href="{{ site.data.about.resume }}" target="_blank" rel="noopener" title="Resume"><i class="fas fa-file-alt" style="font-size: 35px; color: #bd5d38"></i></a> {% endif %}
         </div>
         <div class="social-icons">
-            {% if site.data.about.projects %} <a class="social-icon" href="#research" title="Projects"><i class="fa fa-shapes" style="font-size: 35px; color: #e8828c"></i></a> {% endif %}
+            {% if site.data.about.projects %} <a class="social-icon" onclick="scrollToTopDiv('#research');" title="Projects"><i class="fa fa-shapes" style="font-size: 35px; color: #e8828c"></i></a> {% endif %}
+            {% if site.data.about.codepen %} <a class="social-icon" href="{{ site.data.about.codepen }}" target="_blank" rel="noopener" title="CodePen"><i class="fab fa-codepen" style="font-size: 35px; color: #000000"></i></a> {% endif %}
             {% if site.data.about.orcid %} <a class="social-icon" href="{{ site.data.about.orcid }}" target="_blank" rel="noopener" title="ORCID"><i class="fab fa-orcid" style="font-size: 35px; color: #a6ce39"></i></a> {% endif %}
             {% if site.data.about.contact %} <a class="social-icon" id="contact-card-trigger" title="Contact Info"><i class="fa fa-id-card" style="font-size: 35px; color: #cbbb5f"></i></a> {% endif %}
         </div>
