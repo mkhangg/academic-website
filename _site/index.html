@@ -63,7 +63,7 @@
         <div class="ring-container">
             <div class="ring">
                 <div class="hollow-ring">
-                    <img class="profile-image" src="assets/img/new_pic.jpg" alt="khang nguyen" />
+                    <img class="profile-image" src="assets/img/profile.jpg" alt="khang nguyen" />
                      
                         <div class="emoji-indicator">
                             🍀 <span class="hover-text"> four-leaf clover </span> 
@@ -148,13 +148,31 @@
     </div>
 </div>
 
+<!-- Navigation bar -->
+<!-- Fusion of jQuery slidebar (https://codepen.io/BeshoyRomany/pen/qmNPwN) and animated hamburger menu (https://codepen.io/amberweinberg/pen/yeqJgG) -->
+<nav>
+    <a class="nav-toggle-btn" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <ul>
+        <li><p onclick="scrollToTopDiv('html')"><span class="emoji">🏡</span> <span class="text">home</span></p></li>
+        <li><p onclick="scrollToTopDiv('#updates')"><span class="emoji">📜</span> <span class="text">updates</span></p></li>
+        <li><p onclick="scrollToTopDiv('#research')"><span class="emoji">📚</span> <span class="text">publications</span></p></li>
+        <li><p onclick="scrollToTopDiv('#outreach')"><span class="emoji">🧩</span> <span class="text">outreach</span></p></li>
+        <li><p onclick="scrollToTopDiv('#resources')"><span class="emoji">⛏️</span> <span class="text">resources</span></p></li>
+        <li><p onclick="scrollToTopDiv('#gallery')"><span class="emoji">🖼️</span> <span class="text">gallery</span></p></li>
+    </ul>
+</nav>
+
 <!-- Updates section -->
 
 <hr />
 
 <div class="row" id="updates">
     <div class="col">
-        <h2 clss="mb-5">📍 updates</h2>
+        <h2 clss="mb-5">📜 updates</h2>
         <p></p>
         <div class="owl-carousel owl-theme">
             
@@ -265,7 +283,7 @@
 
 <div class="row" id="research">
     <div class="col">
-        <h2 clss="mb-5">📍 publications</h2>
+        <h2 clss="mb-5">📚 publications</h2>
         <p></p>
         <div id="filters-project">
             <button class="filter-button active" data-filter="*">all</button>
@@ -475,7 +493,7 @@
 
 <div class="row" id="outreach">
     <div class="col">
-        <h2 clss="mb-5">📍 outreach activities</h2>
+        <h2 clss="mb-5">🧩 outreach activities</h2>
         <p></p>
         
             <div class="row mb-4">
@@ -557,7 +575,7 @@
 
 <div class="row" id="resources">
     <div class="col">
-        <h2 clss="mb-5">📍 resources</h2>
+        <h2 clss="mb-5">⛏️ resources</h2>
         <p></p>
         all software releases of the above projects can also be found here!
         <p></p>
@@ -630,7 +648,7 @@
 
 <div class="row" id="gallery">
     <div class="col">
-        <h2 clss="mb-5">📍 gallery</h2>
+        <h2 clss="mb-5">🖼️ gallery</h2>
         <p></p>
         not all about robots, but also some happy moments of my life.
         <p></p>

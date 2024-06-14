@@ -26,6 +26,13 @@ document.getElementById('volumeEmoji').addEventListener('click', function() {
 });
 
 
+// Toggle navigation menu bar
+function toggleNav() {
+    document.querySelector('nav').classList.toggle('animated-menu');
+    document.querySelector('.nav-toggle-btn').classList.toggle('active');
+}
+
+
 // Change the text interchangably "See More" and "See Less"
 function toggleText(linkElement) {
     var collapseId = linkElement.getAttribute('href').substring(1);

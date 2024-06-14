@@ -2,10 +2,12 @@
 body.light-theme {
     background-color: #ffffff;
     color: #333333;
+    transition: 0.5s;
 }
 body.dark-theme {
     background-color: #333333;
     color: #ffffff;
+    transition: 0.5s;
 }
 
 
@@ -33,6 +35,7 @@ hightlight {
 /* Styles for user selection */
 ::selection {
     background-color: #ffb699;
+    transition: 0.5s;
 }
 
 /* Light theme style for user selection */
@@ -46,6 +49,131 @@ hightlight {
 }
 
 
+/* Styles for navigation bar */
+nav {
+    position: fixed;
+    background-color: #f5f5f5;
+    width: 190px;
+    top: 0px;
+    left: -190px;
+    height: 100%;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgba(161, 161, 161, 0.5);
+    transition: 0.5s;
+}
+.light-theme nav {
+    background-color: #f5f5f5;
+    color: black;
+    box-shadow: 2px 0 5px rgba(161, 161, 161, 0.5);
+}
+.dark-theme nav {
+    background-color: #333333;
+    color: white;
+    box-shadow: 2px 0 5px rgba(92, 92, 92, 0.5);
+}
+
+
+/* Styles for hamburger-icon button navigation bar */
+.nav-toggle-btn {
+    padding: 10px 0px 15px 10px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    position: absolute;
+    top: 2.5rem;
+    left: 190px;
+    line-height: 50px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.light-theme .nav-toggle-btn {
+    background-color: #f5f5f5;
+    color: black;
+    border: 2px solid #ddd;
+}
+.dark-theme .nav-toggle-btn {
+    background-color: #333333;
+    color: white;
+    border: 2px solid #555;
+}
+
+
+/* Define hamburger icon styles */
+.nav-toggle-btn span {
+    background: #333333;
+    border-radius: 3px;
+    display: block;
+    height: 3px;
+    margin-top: 5px;
+    position: relative;
+    width: 25px;
+    transition: all 0.5s ease;
+}
+.light-theme .nav-toggle-btn span {
+    background: #333333;
+}
+.dark-theme .nav-toggle-btn span {
+    background: #ffffff;
+}
+
+
+/* Transformation of hamburger icon into close icon */
+.nav-toggle-btn.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    top: 7px;
+}
+.nav-toggle-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.nav-toggle-btn.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    top: -9px;
+}
+
+
+/* Styles for each line in the navigation bar */
+nav ul {
+    list-style: none;
+    margin-top: 3rem;
+    padding: 0;
+}
+nav ul li {
+    text-align: center;
+}
+nav ul li p {
+    color: #bd5d38;
+    display: block;
+    padding: 10px 0px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+}
+nav ul li p span.text {
+    text-decoration: underline;
+    color: #bd5d38;
+    cursor: pointer;
+}
+nav ul li p:hover span.text {
+    color: #824027;
+    cursor: pointer;
+}
+
+
+/* Animated navigation menu bar */
+.animated-menu {
+    left: 0px;
+}
+
+
 /* Code-style text for research interest */
 code {
     font-family: "Consolas";
@@ -54,6 +182,7 @@ code {
     padding: 2px 4px 2px 4px;
     font-size: 83%;
     border-radius: 5px;
+    transition: 0.5s;
 }
 .light-theme code {
     color: #fff;
@@ -74,6 +203,7 @@ code {
     font-size: 89%;
     /* border-top-right-radius: 7px;
     border-bottom-right-radius: 7px; */
+    transition: 0.5s;
 }
 .light-theme .codebox {
     color: #333;
@@ -121,6 +251,7 @@ code {
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     z-index: 1;
+    transition: 0.5s;
 }
 .light-theme .hollow-ring {
     background-color: #ffffff;
@@ -138,6 +269,7 @@ code {
     transform: translate(-50%, -50%);
     border: 5px solid #ffffff;
     z-index: 2;
+    transition: 0.5s;
 }
 .light-theme .profile-image {
     border: 5px solid #ffffff
@@ -163,15 +295,15 @@ code {
     position: relative;
     top: 112px;
     left: 107px;
-    border: 4px solid #ffffff;
+    /* border: 4px solid #ffffff; */
     z-index: 1000;
 }
 .light-theme .emoji-indicator {
-    border: 4px solid #ffffff;
+    /* border: 4px solid #ffffff; */
     background-color: #efefef;
 }
 .dark-theme .emoji-indicator {
-    border: 4px solid #333333;
+    /* border: 4px solid #333333; */
     background-color: #787878;
 }
 .emoji-indicator .hover-text {
@@ -355,7 +487,7 @@ code {
     background-color: transparent;
     color: #333333;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 #filters-project .filter-button:hover {
     background-color: rgba(194, 194, 194, 0.45);
@@ -393,6 +525,7 @@ code {
     border: 1px solid #333333;
     margin: 0 5px;
     border-radius: 7px;
+    transition: 0.5s;
 }
 .isotope-pager-project .pager:hover {
     background-color: rgba(194, 194, 194, 0.45);
@@ -427,8 +560,6 @@ code {
 }
 
 
-
-
 /* Styles for pager buttons */
 .isotope-pager-github {
     display: flex;
@@ -443,6 +574,7 @@ code {
     border: 1px solid #333333;
     margin: 0 5px;
     border-radius: 7px;
+    transition: 0.5s;
 }
 .isotope-pager-github .pager:hover {
     background-color: rgba(194, 194, 194, 0.45);
@@ -491,7 +623,7 @@ code {
     background-color: transparent;
     color: #333333;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 #filters-resources .filter-button:hover {
     background-color: rgba(194, 194, 194, 0.45);
@@ -612,6 +744,7 @@ div.desc {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
 }
 .dark-theme .github-card {
     background-color: #292929;
@@ -631,16 +764,19 @@ div.desc {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    transition: 0.5s;
 }
 .repo-header .bookmark-icon {
     margin-right: 8px;
     color: #586069;
+    transition: 0.5s;
 }
 .repo-name {
     font-weight: 500;
     color: #0366d6;
     font-size: 16px;
     text-decoration: none;
+    transition: 0.5s;
 }
 .repo-name:hover {
     text-decoration: underline;
@@ -655,14 +791,18 @@ div.desc {
     color: #586069;
     margin-bottom: 16px;
     line-height: 1.4;
+    transition: 0.5s;
 }
 .stats-number {
     margin-left: 4px;
+    transition: 0.5s;
+    transition: 0.5s;
 }
 .repo-stats {
     display: flex;
     align-items: center;
     font-size: 14px;
+    transition: 0.5s;
 }
 .repo-stats > * {
     display: flex;
@@ -675,6 +815,7 @@ div.desc {
 .language-icon {
     color: #007bff;
     margin-right: 8px;
+    transition: 0.5s;
 }
 .dark-theme .repo-description,
 .dark-theme .stats-number,
@@ -683,9 +824,11 @@ div.desc {
 }
 .star-icon {
     color: #ffc107;
+    transition: 0.5s;
 }
 .fork-icon {
     color: #333;
+    transition: 0.5s;
 }
 .dark-theme .bookmark-icon,
 .dark-theme .fork-icon {
@@ -737,11 +880,11 @@ div.desc {
     height: 55px;
     border-radius: 7px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 1000; 
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 
@@ -789,6 +932,7 @@ div.desc {
     max-width: 200px;
     margin-left: 0px;
     font-size: 14px;
+    transition: 0.5s;
 }
 
 
@@ -840,6 +984,7 @@ div.desc {
     position: fixed;
     top: 0;
     z-index: 1;
+    transition: 0.5s;
 }
 .progress-bar {
     height: 1px;

@@ -10,6 +10,7 @@ This repository contains source code of [my academic website](https://mkhangg.co
 ## Update
 List of updates (in terms of functionalities):
 
+* **[14 Jun 2024]** Navigation bar is added.
 * **[07 May 2024]** Flippable contact information card including email and phone number is added.
 * **[31 Mar 2024]** Resources section with GitHub widgets (using [GitHub REST API](hhttps://docs.github.com/en/rest) and [Isotope](https://isotope.metafizzy.co/)) is added.
 * **[30 Nov 2023]** Carousel for updates/news items (using [OwlCarousel2](https://owlcarousel2.github.io/OwlCarousel2/)) is added.
