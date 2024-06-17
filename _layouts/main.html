@@ -54,6 +54,24 @@
         <!-- Dismissal area for assistant icon -->
         <div class="dismissal-area" id="dismissalArea">&#10006;</div>
 
+        <!-- Navigation bar -->
+        <!-- Fusion of jQuery slidebar (https://codepen.io/BeshoyRomany/pen/qmNPwN) and animated hamburger menu (https://codepen.io/amberweinberg/pen/yeqJgG) -->
+        <nav>
+            <a class="nav-toggle-btn" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <ul>
+                <li><p onclick="scrollToTopDiv('html')"><span class="emoji">🏡</span> <span class="text">home</span></p></li>
+                <li><p onclick="scrollToTopDiv('#updates')"><span class="emoji">📜</span> <span class="text">updates</span></p></li>
+                <li><p onclick="scrollToTopDiv('#research')"><span class="emoji">📚</span> <span class="text">publications</span></p></li>
+                <li><p onclick="scrollToTopDiv('#outreach')"><span class="emoji">🧩</span> <span class="text">outreach</span></p></li>
+                <li><p onclick="scrollToTopDiv('#resources')"><span class="emoji">⛏️</span> <span class="text">resources</span></p></li>
+                <li><p onclick="scrollToTopDiv('#gallery')"><span class="emoji">🖼️</span> <span class="text">gallery</span></p></li>
+            </ul>
+        </nav>
+
         <!-- Content -->
         <div class="container" style="padding-top: 3rem;">
             {{ content }}
