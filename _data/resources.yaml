@@ -16,6 +16,9 @@ links:
   - git-api: https://api.github.com/repos/mkhangg/refined_panoptic_mapping
     category: research
 
+  - git-api: https://api.github.com/repos/mkhangg/v3d-slam
+    category: research
+
   - git-api: https://api.github.com/repos/mkhangg/semantic_scene_perception
     category: research
   

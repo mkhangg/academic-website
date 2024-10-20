@@ -1,5 +1,21 @@
 updates:
 
+  - picture: assets/img/updates_gan/boy_cochair.jpg
+    desc: I will serve as co-chair for the <hightlight>Object Detection session</hightlight> at IROS 2024.
+    time: October 2024
+
+  - picture: assets/img/updates_gan/abudhabi_boy.jpg
+    desc: I will attend IROS 2024 in <hightlight>Abu Dhabi, UAE</hightlight>.
+    time: October 2024
+
+  - picture: assets/img/updates_gan/fix_robot.jpg
+    desc: I will be the GTA for <hightlight>CSE 4360 (Robotics) course</hightlight> this semester!
+    time: August 2024
+
+  - picture: assets/img/updates_gan/scanner_bots.jpg
+    desc: <hightlight>V3D-SLAM</hightlight> and <hightlight>Refined PanMap</hightlight> papers are accepted at IROS 2024!
+    time: June 2024
+
   - picture: assets/img/updates_gan/lab_boy.jpg
     desc: I will continue my <hightlight>PhD studies in robotics</hightlight> at the LEARN Lab. 
     time: May 2024
@@ -17,11 +33,11 @@ updates:
     time: September 2023
 
   - picture: assets/img/updates_gan/holding_can_robot.jpg
-    desc: The <hightlight>deformable object classification</hightlight> paper is accepted to ISR 2023!
+    desc: The <hightlight>deformable object classification</hightlight> paper is accepted at ISR 2023!
     time: June 2023
 
   - picture: assets/img/updates_gan/calibrating_robot.jpg
-    desc: The <hightlight>multiplanar self-calibration</hightlight> paper is accepted to IROS 2023!
+    desc: The <hightlight>multiplanar self-calibration</hightlight> paper is accepted at IROS 2023!
     time: June 2023
 
   - picture: assets/img/updates_gan/fireworks_robot.jpg
@@ -33,7 +49,7 @@ updates:
     time: April 2023
 
   - picture: assets/img/updates_gan/happy_robot.jpg
-    desc: The <hightlight>PerFC</hightlight> paper is accepted to FLAIRS-36!
+    desc: The <hightlight>PerFC</hightlight> paper is accepted at FLAIRS-36!
     time: March 2023
 
   - picture: assets/img/updates_gan/reading_boy.jpg
@@ -49,7 +65,7 @@ updates:
     time: August 2022
     
   - picture: assets/img/updates_gan/happy_tree.jpg
-    desc: The <hightlight>IoTree</hightlight> paper is accepted to MobiCom 2022!
+    desc: The <hightlight>IoTree</hightlight> paper is accepted at MobiCom 2022!
     time: June 2022
 
   - picture: assets/img/updates_gan/farm_bot.jpg

@@ -1,4 +1,16 @@
 mini-projects:
+  
+  - title: Lightweight Semantic Perception Module for Autonomous Systems
+    system-name: 
+    gif: assets/img/demo_sawyer.gif
+    event: Senior Design (Arlington, TX, U.S.)
+    event-web: 
+    team: Zobia Tahir, Diya Ranjit, Jose Morales, ChangHao Yang, <u>Khang Nguyen</u>.
+    post: 
+    code: 
+    demo: 
+    description: We build a versatile software module for semantic scene understanding for broadly vision-based automation applications, including robots or unmanned vehicles installed with the Intel RealSense camera family with resource-constraint computing platforms. The video demonstrates the Sawyer manipulator to "see" the bottle, pick it, and put it into a destination box.
+    prize: 
 
   - title: Autonomous Waypoint Navigation with GPS and ArduRover
     system-name: 

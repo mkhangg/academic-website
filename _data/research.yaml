@@ -3,11 +3,50 @@ categories:
   - data-filter: perception manipulation
     category-name: perception + manipulation
 
+  - data-filter: slam
+    category-name: slam
+
   - data-filter: framework
     category-name: framework
 
 
 projects:
+
+  - title: Volumetric Mapping with Panoptic Refinement via Kernel Density Estimation for Mobile Robots
+    system-name: 
+    gif: assets/img/demo_refined_mapping.gif
+    conference: IROS 2024 (Abu Dhabi, United Arab Emirates) 
+    conference-web: https://iros2024-abudhabi.org/
+    status:
+    authors: <u>Khang Nguyen</u>, Tuan Dang, Manfred Huber.
+    pdf: https://mkhangg.com/assets/papers/nguyen2024volumetric.pdf
+    code: https://github.com/mkhangg/refined_panoptic_mapping
+    demo: https://youtu.be/u214kCms27M
+    slides: https://mkhangg.com/assets/slides/iros24b_slides.pdf
+    talk: https://youtu.be/vQZMQApcTCY
+    poster: https://mkhangg.com/assets/posters/iros24b_poster.pdf
+    abstract-less: Reconstructing three-dimensional (3D) scenes with semantic understanding is vital in many robotic applications. Robots need to identify which objects, along with their positions and shapes, to manipulate them precisely with given tasks. Mobile robots, especially, usually use lightweight networks to segment objects on RGB images and then localize them via depth maps; however, they 
+    abstract-more: often encounter out-of-distribution scenarios where masks over-cover the objects. In this paper, we address the problem of panoptic segmentation quality in 3D scene reconstruction by refining segmentation errors using non-parametric statistical methods. To enhance mask precision, we map the predicted masks into a depth frame to estimate their distribution via kernel densities. The outliers in depth perception are then rejected without the need for additional parameters in an adaptive manner to out-of-distribution scenarios, followed by 3D reconstruction using projective signed distance functions (SDFs). We validate our method on a synthetic dataset, which shows improvements in both quantitative and qualitative results for panoptic mapping. Through real-world testing, the results furthermore show our method's capability to be deployed on a real-robot system.
+    tag: more_refined_mapping
+    category: slam
+
+  - title: Robust RGB-D SLAM in Dynamic Environments with 3D Semantic Geometry Voting
+    system-name: V3D-SLAM
+    gif: assets/img/demo_v3d_slam.gif
+    conference: IROS 2024 (Abu Dhabi, United Arab Emirates)
+    conference-web: https://iros2024-abudhabi.org/
+    status:
+    authors: Tuan Dang, <u>Khang Nguyen</u>, Manfred Huber.
+    pdf: https://www.tuandang.info/assets/papers/v3d-slam.pdf
+    code: https://github.com/tuantdang/v3d-slam
+    demo: https://youtu.be/K4RcKrASpqI
+    slides: https://mkhangg.com/assets/slides/iros24a_slides.pdf
+    talk: https://youtu.be/aWGu9Qxow7g
+    poster: https://mkhangg.com/assets/posters/iros24a_poster.pdf
+    abstract-less: Simultaneous localization and mapping (SLAM) in highly dynamic environments is challenging due to the correlation complexity between moving objects and the camera pose. Many methods have been proposed to deal with this problem; however, the moving properties of dynamic objects with a moving camera remain unclear. Therefore, to improve SLAM's performance, 
+    abstract-more: minimizing disruptive events of moving objects with a physical understanding of 3D shapes and dynamics of objects is needed. In this paper, we propose a robust method, V3D-SLAM, to remove moving objects via two lightweight re-evaluation stages, including identifying potentially moving and static objects using a spatial-reasoned Hough voting mechanism and refining static objects by detecting dynamic noise caused by intra-object motions using Chamfer distances as similarity measurements. Through our experiment on the TUM RGB-D benchmark on dynamic sequences with ground-truth camera trajectories, the results show that our methods outperform most other recent state-of-the-art SLAM methods.
+    tag: more_v3d_slam
+    category: slam
 
   - title: Real-Time 3D Semantic Scene Perception for Egocentric Robots with Binocular Vision
     system-name: 
@@ -21,6 +60,7 @@ projects:
     demo: https://youtu.be/-dho7l_r56U
     slides: 
     talk: 
+    poster: 
     abstract-less: Perceiving a three-dimensional (3D) scene with multiple objects while moving indoors is essential for vision-based mobile cobots, especially for enhancing their manipulation tasks. In this work, we present an end-to-end pipeline with instance segmentation, feature matching, and point-set registration for egocentric robots with binocular vision, and demonstrate the robot's 
     abstract-more: grasping capability through the proposed pipeline. First, we design an RGB image-based segmentation approach for single-view 3D semantic scene segmentation, leveraging common object classes in 2D datasets to encapsulate 3D points into point clouds of object instances through corresponding depth maps. Next, 3D correspondences of two consecutive segmented point clouds are extracted based on matched keypoints between objects of interest in RGB images from the prior step. In addition, to be aware of spatial changes in 3D feature distribution, we also weigh each 3D point pair based on the estimated distribution using kernel density estimation (KDE), which subsequently gives robustness with less central correspondences while solving for rigid transformations between point clouds. Finally, we test our proposed pipeline on the 7-DOF dual-arm Baxter robot with a mounted Intel RealSense D435i RGB-D camera. The result shows that our robot can segment objects of interest, register multiple views while moving, and grasp the target object.
     tag: more_scene_perception
@@ -38,6 +78,7 @@ projects:
     demo: https://youtu.be/qkgi3T6xYzI
     slides: https://mkhangg.com/assets/slides/isr23_slides.pdf
     talk: https://youtu.be/ATzyXtLAK6E
+    poster: 
     abstract-less: Vision-based object manipulation in assistive mobile cobots essentially relies on classifying the target objects based on their 3D shapes and features, whether they are deformed or not. In this work, we present an auto-generated dataset of deformed objects specific for assistive mobile cobot manipulation using an intuitive Laplacian-based mesh deformation procedure. We 
     abstract-more: first determine the graspable region of the robot hand on the given object's mesh. Then, we uniformly sample handle points within the graspable region and perform deformation with multiple handle points based on the robot gripper configuration. In each deformation, we identify the orientation of handle points and prevent self-intersection to guarantee the object's physical meaning when multiple handle points are simultaneously applied to the mesh at different deformation intensities. We also introduce a lightweight neural network for 3D deformable object classification. Finally, we test our generated dataset on the Baxter robot with two 7-DOF arms, an integrated RGB-D camera, and a 3D deformable object classifier. The result shows that the robot is able to classify real-world deformed objects from point clouds captured at multiple views by the RGB-D camera.
     tag: more_online
@@ -55,6 +96,7 @@ projects:
     demo: https://youtu.be/KrDJ22rvOAo
     slides: 
     talk: 
+    poster: 
     abstract-less: Calibration is the first and foremost step in dealing with sensor displacement errors that can appear during extended operation and off-time periods to enable robot object manipulation with precision. In this paper, we present a novel multiplanar self-calibration between the 
     abstract-more: camera system and the robot's end-effector for 3D object manipulation. Our approach first takes the robot end-effector as ground truth to calibrate the camera’s position and orientation while the robot arm moves the object in multiple planes in 3D space, and a 2D state-of-the-art vision detector identifies the object’s center in the image coordinates system. The transformation between world coordinates and image coordinates is then computed using 2D pixels from the detector and 3D known points obtained by robot kinematics. Next, an integrated stereo-vision system estimates the distance between the camera and the object, resulting in 3D object localization. We test our proposed method on the Baxter robot with two 7-DOF arms and a 2D detector that can run in real time on an onboard GPU. After self-calibrating, our robot can localize objects in 3D using an RGB camera and depth image.
     tag: more_multiplanar
@@ -72,6 +114,7 @@ projects:
     demo: https://youtu.be/q4oz9Rixbzs
     slides: 
     talk: 
+    poster: 
     abstract-less: As the reliability of the robot's perception correlates with the number of integrated sensing modalities to tackle uncertainty, a practical solution to manage these sensors from different computers, operate them simultaneously, and maintain their real-time performance on the existing robotic system with minimal effort is needed. In this work, we present an end-to-end software-hardware 
     abstract-more: framework, namely <i>ExtPerFC</i>, that supports both conventional hardware and software components and integrates machine learning object detectors without requiring an additional dedicated graphic processor unit (GPU). We first design our framework to achieve real-time performance on the existing robotic system, guarantee configuration optimization, and concentrate on code reusability. We then mathematically model and utilize our transfer learning strategies for 2D object detection and fuse them into depth images for 3D depth estimation. Lastly, we systematically test the proposed framework on the Baxter robot with two 7-DOF arms, a four-wheel mobility base, and an Intel RealSense D435i RGB-D camera. The results show that the robot achieves real-time performance while executing other tasks (<i>e.g.</i>, map building, localization, navigation, object detection, arm moving, and grasping) simultaneously with available hardware like Intel onboard CPUs/GPUs on distributed computers. Also, to comprehensively control, program, and monitor the robot system, we design and introduce an end-user application.
     tag: more_extperfc
@@ -89,6 +132,7 @@ projects:
     demo: https://youtu.be/q4oz9Rixbzs
     slides: 
     talk: 
+    poster: 
     abstract-less: In this work, we present an end-to-end software-hardware framework that supports both conventional hardware and software components and integrates machine learning object detectors without requiring an additional dedicated graphic processor unit (GPU). We design our framework to achieve real-time performance on the robot system, guarantee such performance on 
     abstract-more: multiple computing devices, and concentrate on code reusability. We then utilize transfer learning strategies for 2D object detection and fuse them into depth images for 3D depth estimation. Lastly, we test the proposed framework on the Baxter robot with two 7-DOF arms and a four-wheel mobility base. The results show that the robot achieves real-time performance while executing other tasks (map building, localization, navigation, object detection, arm moving, and grasping) with available hardware like Intel onboard GPUs on distributed computers. Also, to comprehensively control, program, and monitor the robot system, we  design and introduce an end-user application.
     tag: more_perfc
@@ -106,6 +150,7 @@ projects:
     demo: https://youtu.be/8DUfOcuPwIk
     slides: 
     talk: 
+    poster: 
     abstract-less: In this paper, we present a low-maintenance, wind-powered, batteryfree, biocompatible, tree wearable, and intelligent sensing system, namely <i>IoTree</i>, to monitor water and nutrient levels inside a living tree. <i>IoTree</i> system includes tiny-size, biocompatible, and implantable sensors that 
     abstract-more: continuously measure the impedance variations inside the living tree’s xylem, where water and nutrients are transported from the root to the upper parts. The collected data are then compressed and transmitted to a base station located at up to 1.8 kilometers (approximately 1.1 miles) away. The entire <i>IoTree</i> system is powered by wind energy and controlled by an adaptive computing technique called block-based intermittent computing, ensuring the forward progress and data consistency under intermittent power and allowing the firmware to execute with the most optimal memory and energy usage. We prototype <i>IoTree</i> that opportunistically performs sensing, data compression, and long-range communication tasks without batteries. During in-lab experiments, <i>IoTree</i> also obtains the accuracy of 91.08% and 90.51% in measuring 10 levels of nutrients, NH<sub>3</sub> and K<sub>2</sub>O, respectively. While tested with Burkwood Viburnum and White Bird trees in the indoor environment, <i>IoTree</i> data strongly correlated with multiple watering and fertilizing events. We also deployed <i>IoTree</i> on a grapevine farm for 30 days, and the system is able to provide sufficient measurements every day.
     tag: more_iotree
